@@ -1,15 +1,26 @@
-import sumar from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+
+const form = document.querySelector("#mascota-form");
+const nombreInput = document.querySelector("#nombre");
+
+const registroDiv = document.querySelector("#registro-mascotas");
+const mostrarFormBtn = document.querySelector("#mostrar-form-btn");
+
+const mascotas = [];
+
+// Mostrar el formulario al presionar el botón
+mostrarFormBtn.addEventListener("click", () => {
+  form.style.display = "block";
+  mostrarFormBtn.style.display = "none";
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const nombre = nombreInput.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+
+  registroDiv.innerHTML="Por favor, completa todos los campos."
+
+  
 });

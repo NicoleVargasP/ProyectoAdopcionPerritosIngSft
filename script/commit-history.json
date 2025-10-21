@@ -1,11 +1,11 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "9b874cb3562f6ad251ba7630f2c133b792061c5c",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-21T14:16:31.000Z",
       "message": "commit para que cypress funcione",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/9b874cb3562f6ad251ba7630f2c133b792061c5c"
     },
     "stats": {
       "total": 15,
@@ -17,5 +17,24 @@
     "test_count": 1,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-21T17:49:17.000Z",
+      "message": "feat: interfaz para ingresar el nombre y prueba si esta vacio",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 92,
+      "additions": 50,
+      "deletions": 42,
+      "date": "2025-10-21"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
   }
 ]
