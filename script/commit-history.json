@@ -1,0 +1,21 @@
+[
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-21T14:16:31.000Z",
+      "message": "commit para que cypress funcione",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 9,
+      "deletions": 6,
+      "date": "2025-10-21"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  }
+]
