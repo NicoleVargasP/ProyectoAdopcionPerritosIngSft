@@ -19,17 +19,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "146a591100fa979ccbba7079efb0887127ffe2a8",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-21T17:49:17.000Z",
       "message": "feat: interfaz para ingresar el nombre y prueba si esta vacio",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/146a591100fa979ccbba7079efb0887127ffe2a8"
     },
     "stats": {
       "total": 92,
       "additions": 50,
       "deletions": 42,
+      "date": "2025-10-21"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-21T23:37:03.000Z",
+      "message": "feat: recibe y muestra el nombre de la mascota registrada",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 49,
+      "additions": 38,
+      "deletions": 11,
       "date": "2025-10-21"
     },
     "coverage": 0,
