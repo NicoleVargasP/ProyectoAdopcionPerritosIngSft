@@ -95,17 +95,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "3e00947825a44a5f07bcb911e4debcd079654c14",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-22T06:18:26.000Z",
       "message": "fit:Se implemento los campos de descripcion y contacto",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/3e00947825a44a5f07bcb911e4debcd079654c14"
     },
     "stats": {
       "total": 52,
       "additions": 48,
       "deletions": 4,
+      "date": "2025-10-22"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-22T17:16:20.000Z",
+      "message": "fit: se implemento el boton mostrar mascota con sus funcionalidades",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 95,
+      "additions": 68,
+      "deletions": 27,
       "date": "2025-10-22"
     },
     "coverage": 0,
