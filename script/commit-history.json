@@ -38,18 +38,37 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "4563865b3b1b2b64d39d75a99a6dc4b1f3a7707e",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-21T23:37:03.000Z",
       "message": "feat: recibe y muestra el nombre de la mascota registrada",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/4563865b3b1b2b64d39d75a99a6dc4b1f3a7707e"
     },
     "stats": {
       "total": 49,
       "additions": 38,
       "deletions": 11,
       "date": "2025-10-21"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-22T04:32:08.000Z",
+      "message": "feat:Se añadio el apartado de edad de la mascota",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 35,
+      "additions": 26,
+      "deletions": 9,
+      "date": "2025-10-22"
     },
     "coverage": 0,
     "test_count": 0,
