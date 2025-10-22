@@ -20,6 +20,7 @@ mostrarFormBtn.addEventListener("click", () => {
   Registrarform.style.display = "block";
   mostrarFormBtn.style.display = "none";
   mostrarMascotasBtn.style.display = "none";
+  registroDiv.innerHTML="";
 });
 
 // Registrar una nueva mascota
@@ -58,22 +59,6 @@ Registrarform.addEventListener("submit", (event) => {
 
 // Mostrar todas las mascotas registradas
 mostrarMascotasBtn.addEventListener("click", () => {
-  if (mascotasGlobales.length === 0) {
-    registroDiv.innerHTML = "<p>No hay mascotas registradas todavía.</p>";
-    return;
-  }
-
-  registroDiv.innerHTML = mascotasGlobales
-    .map(
-      (m) => `
-      <div style="border:1px solid #ccc; padding:10px; border-radius:10px; margin:8px 0;">
-        <p><b>Id:</b> ${m.id}</p>
-        <p><b>Nombre:</b> ${m.nombre}</p>
-        <p><b>Edad:</b> ${m.edad}</p>
-        <p><b>Especie:</b> ${m.especie}</p>
-        <p><b>Descripción:</b> ${m.descripcion}</p>
-        <p><b>Contacto:</b> ${m.contacto}</p>
-      </div>`
-    )
-    .join("");
+  const html = mostrarMascotas(mascotasGlobales);
+  registroDiv.innerHTML = html;
 });

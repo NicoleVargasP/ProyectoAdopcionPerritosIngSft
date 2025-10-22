@@ -114,17 +114,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "af29b42919a7955acbade89a22945ee4d28a18fe",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-22T17:16:20.000Z",
       "message": "fit: se implemento el boton mostrar mascota con sus funcionalidades",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/af29b42919a7955acbade89a22945ee4d28a18fe"
     },
     "stats": {
       "total": 95,
       "additions": 68,
       "deletions": 27,
+      "date": "2025-10-22"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-22T18:54:43.000Z",
+      "message": "refactor: se mejoro las funcionalidades del mostrar mascota y se mejoraron algunas funciones visuales",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 50,
+      "additions": 22,
+      "deletions": 28,
       "date": "2025-10-22"
     },
     "coverage": 0,
