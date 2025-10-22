@@ -1,11 +1,13 @@
-export default function registrarMascota(nom,edad) {
+export default function registrarMascota(id,nom,edad,especie) {
   // validaciones
-  if (!nom || !edad) {
+  if (!id || !nom || !edad || !especie) {
     return "Por favor, completa todos los campos.";
   }
 
   return {
+    id: id.trim(),
     nombre: nom.trim(),
-    edad: edad.trim()
+    edad: edad.trim(),
+    especie: especie.trim(),
   };
 }
