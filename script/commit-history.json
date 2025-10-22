@@ -152,17 +152,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "fec88f8fa7dee695b3d9635b203f7bcbfd21813b",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-22T19:19:25.000Z",
       "message": "Fix:se corrigio lso errores de las pruebas de cypress para regristro",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/fec88f8fa7dee695b3d9635b203f7bcbfd21813b"
     },
     "stats": {
       "total": 8,
       "additions": 7,
       "deletions": 1,
+      "date": "2025-10-22"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-22T20:52:12.000Z",
+      "message": "refactor: se mejoro el index para que ahora pueda asignar o no valores pero que sigan siendo campos obligatorios",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 52,
+      "additions": 39,
+      "deletions": 13,
       "date": "2025-10-22"
     },
     "coverage": 0,

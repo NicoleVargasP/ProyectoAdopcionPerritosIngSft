@@ -13,19 +13,45 @@
 
     <!-- Formulario (oculto al inicio) -->
     <form id="mascota-form" style="display: none; margin-top: 15px;">
-      <label for="id">Id de la mascota:</label>
-      <input type="text" id="id"  />
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre"  />
-      <label for="edad">Edad:</label>
-      <input type="text" id="edad"  />
-      <label for="especie">Especie:</label>
-      <input type="text" id="especie"  />
-       <label for="descripcion">Descripción:</label>
-      <input type="text" id="descripcion"  />
-       <label for="contacto">Contacto:</label>
-      <input type="text" id="contacto"  />
-      <input type="submit" value="Registrar Mascota" />
+  <!-- Id sigue siendo input normal -->
+  <label>ID:</label>
+  <input type="text" id="id" /><br />
+
+  <!-- Nombre con combo editable -->
+  <label>Nombre:</label>
+  <input list="nombre-options" id="nombre" />
+  <datalist id="nombre-options">
+    <option value="Sin nombre asignado">
+  </datalist>
+  <br />
+
+  <!-- Edad con combo editable -->
+  <label>Edad:</label>
+  <input list="edad-options" id="edad" />
+  <datalist id="edad-options">
+    <option value="Sin edad asignada">
+  </datalist>
+  <br />
+
+  <!-- Especie sigue normal -->
+  <label>Especie:</label>
+  <input type="text" id="especie" /><br />
+
+  <!-- Descripción con combo editable -->
+  <label>Descripción:</label>
+  <input list="desc-options" id="descripcion" />
+  <datalist id="desc-options">
+    <option value="No se añadio una descripcion">
+  </datalist>
+  <br />
+
+  <!-- Contacto sigue normal -->
+  <label>Contacto:</label>
+  <input type="text" id="contacto" /><br />
+
+  <input type="submit" value="Registrar" />
+</form>
+
     </form>
 
     <h2>Registro Mascotas</h2>
