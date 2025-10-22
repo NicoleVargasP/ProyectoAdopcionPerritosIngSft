@@ -76,17 +76,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "debb64b356547b7d3bf4e8569b9f93c193eaa561",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-22T05:33:47.000Z",
       "message": "fit: Se implementaron los campos de id mascota y especie",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/debb64b356547b7d3bf4e8569b9f93c193eaa561"
     },
     "stats": {
       "total": 71,
       "additions": 53,
       "deletions": 18,
+      "date": "2025-10-22"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-22T06:18:26.000Z",
+      "message": "fit:Se implemento los campos de descripcion y contacto",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 52,
+      "additions": 48,
+      "deletions": 4,
       "date": "2025-10-22"
     },
     "coverage": 0,
