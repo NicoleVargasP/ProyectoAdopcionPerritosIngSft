@@ -133,17 +133,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "652900239247b692493dbd0e8d2db0adf45c2c2c",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-22T18:54:43.000Z",
       "message": "refactor: se mejoro las funcionalidades del mostrar mascota y se mejoraron algunas funciones visuales",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/652900239247b692493dbd0e8d2db0adf45c2c2c"
     },
     "stats": {
       "total": 50,
       "additions": 22,
       "deletions": 28,
+      "date": "2025-10-22"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-22T19:19:25.000Z",
+      "message": "Fix:se corrigio lso errores de las pruebas de cypress para regristro",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 7,
+      "deletions": 1,
       "date": "2025-10-22"
     },
     "coverage": 0,
