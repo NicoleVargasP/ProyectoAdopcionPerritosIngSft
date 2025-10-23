@@ -1,35 +1,16 @@
 [
   {
-    "sha": "98625e711517b0465039956152d62757f476aeb4",
-    "author": "Nicole Vargas",
-    "commit": {
-      "date": "2025-10-23T04:15:58.000Z",
-      "message": "test: Refactorizacion de pruebas en mostrar y registrar",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/98625e711517b0465039956152d62757f476aeb4"
-    },
-    "stats": {
-      "total": 43,
-      "additions": 43,
-      "deletions": 0,
-      "date": "2025-10-23"
-    },
-    "coverage": 57.14,
-    "test_count": 2,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
     "sha": "HEAD",
     "author": "Nicole Vargas",
     "commit": {
-      "date": "2025-10-23T04:53:05.000Z",
-      "message": "refactor: mejoras en validaciones de registrar y en las pruebas",
+      "date": "2025-10-23T04:55:12.000Z",
+      "message": "fix: correccion de pruebas",
       "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
     },
     "stats": {
-      "total": 65,
-      "additions": 53,
-      "deletions": 12,
+      "total": 66,
+      "additions": 59,
+      "deletions": 7,
       "date": "2025-10-23"
     },
     "coverage": 85.71,
