@@ -4,7 +4,7 @@ describe("Función registrarMascota", () => {
 
   test("Debe devolver mensaje de error si falta algún campo", () => {
     const resultado = registrarAplicacion(8,"Pelula",null, "Jorge","jorge@email.com" , 789456, "Me Gustan los perritos", "555-123");
-    expect(resultado).toBe("Ingrese todos los parametros requeridos porfavor");
+    expect(resultado.mensaje).toBe("Ingrese todos los parametros requeridos porfavor");
   });
 
   test("Debe aceptar un número telefónico válido", () => {
@@ -19,6 +19,6 @@ describe("Función registrarMascota", () => {
 
   test("Debe devolver error si el correo y número son inválidos", () => {
     const resultado = registrarAplicacion(3, "Rocky", "4567890", "Lucía", "correo_invalido", "numero123", "Adopción");
-    expect(resultado).toBe("Ingrese un número telefónico o correo electrónico válido.");
+    expect(resultado.mensaje).toBe("Ingrese un número telefónico o correo electrónico válido.");
   });
 });

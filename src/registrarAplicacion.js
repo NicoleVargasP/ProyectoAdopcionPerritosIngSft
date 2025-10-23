@@ -4,7 +4,7 @@ export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, c
   }
 
   if (!IdMascota || !nomMascota || !ci || !nombre || !correo || !numero) {
-    return "Ingrese todos los parametros requeridos porfavor";
+    return {exito: false,mensaje: "Ingrese todos los parametros requeridos porfavor"};
   }
 
   // Validaciones de correo y número telefónico
@@ -12,7 +12,7 @@ export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, c
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!telefonoRegex.test(numero) && !emailRegex.test(correo)) {
-    return "Ingrese un número telefónico o correo electrónico válido.";
+        return {exito: false,mensaje: "Ingrese un número telefónico o correo electrónico válido."};
   }
 
   return (

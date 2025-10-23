@@ -247,17 +247,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a56a784b4740f224a84108cb8a23340c29b0dfdb",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-23T09:25:34.000Z",
       "message": "refactor: presenter",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/a56a784b4740f224a84108cb8a23340c29b0dfdb"
     },
     "stats": {
       "total": 11,
       "additions": 8,
       "deletions": 3,
+      "date": "2025-10-23"
+    },
+    "coverage": 96.3,
+    "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T12:47:30.000Z",
+      "message": "fix: vistas de elementos",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 42,
+      "additions": 24,
+      "deletions": 18,
       "date": "2025-10-23"
     },
     "coverage": 96.3,

@@ -72,12 +72,14 @@ Registrarform.addEventListener("submit", (event) => {
   registroDiv.innerHTML = `<p>${mensaje}</p>`;
 
   // Si faltan datos, mantener el formulario visible
-  if (mensaje === "Por favor, completa todos los campos.") {
+  if (mensaje.exito == false) {
     Registrarform.style.display = "block";
     mostrarFormBtn.style.display = "none";
     mostrarMascotasBtn.style.display = "none";
+    registroDiv.innerHTML ="Error: "+mensaje.mensaje+"<p>"
     return;
   }
+  registroDiv.innerHTML = `<p>${mensaje}</p>`;
 
 // Mostrar todas las mascotas registradas
 /*mostrarMascotasBtn.addEventListener("click", () => {
@@ -130,6 +132,7 @@ document.addEventListener("click", (e) => {
     infoMascotaAdoptar.innerHTML="Id Mascota: "+registroDiv.idMascota+"<p>                   Nombre Mascota: "+nombreMascota
     mostrarFormBtn.style.display = "none";
     mostrarMascotasBtn.style.display = "none";
+    busquedaContainer.style.display="none";
     return;
 
   }
@@ -139,9 +142,10 @@ btnRegistroAplicacion.addEventListener("click", () => {
   
   divAplicacion.innerHTML=aplicacion
   divAplicacion.style.display="block"
-  if (aplicacion === "Ingrese todos los parametros requeridos porfavor") {
+  if (aplicacion.exito ==false) {
     mostrarFormBtn.style.display = "none";
     mostrarMascotasBtn.style.display = "none";
+    divAplicacion.innerHTML=aplicacion.mensaje;
     return;
   }
   mostrarFormBtn.style.display = "block";
