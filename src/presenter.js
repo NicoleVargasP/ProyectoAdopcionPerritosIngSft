@@ -34,7 +34,7 @@ Registrarform.addEventListener("submit", (event) => {
   const descripcion = descripcionInput.value;
   const contacto = contactoInput.value;
 
-  const mensaje = registrarMascota(id, nombre, edad, especie, descripcion, contacto);
+  const mensaje = registrarMascota(id, nombre, edad, especie, descripcion, contacto, mascotasGlobales);
 
   registroDiv.style.display = "block";
   registroDiv.innerHTML = `<p>${mensaje}</p>`;
