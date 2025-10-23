@@ -1,5 +1,6 @@
 import registrarMascota from "./registrarMascota";
 import mostrarMascotas from "./mostrarMascotas";
+import registrarAplicacion from "./registrarAplicacion";
 
 const mascotasGlobales = [];
 const mascotaInicial = {
@@ -10,6 +11,8 @@ const mascotaInicial = {
   descripcion: "Muy juguetóna, amigable y dormilona.",
   contacto: "12345678"
 };
+const AplicacionesGlobales=[];
+
 mascotasGlobales.push(mascotaInicial)
 
 const Registrarform = document.querySelector("#mascota-form");
@@ -29,10 +32,16 @@ const busquedaContainer = document.querySelector("#busqueda-container");
 const parametroBusquedaInput = document.querySelector("#parametro-busqueda");
 const buscarBtn = document.querySelector("#buscar-btn");
 
-
-
 const infoMascotaAdoptar =document.querySelector("#info-mascota-adoptar")
 const formularioAdopcion =document.querySelector("#adoptar-form")
+
+const ciInput = document.querySelector("#ciAplicante");
+  const nomApInput = document.querySelector("#nombreAplicante");
+  const correoInput = document.querySelector("#correoAplicante");
+  const numeroApInput = document.querySelector("#numeroAplicante");
+  const razonInput = document.querySelector("#razonAdopcion");
+  const btnRegistroAplicacion = document.querySelector("#registrarAplicacion");
+  const divAplicacion = document.querySelector("#aplicacionesDiv");
 
 
 
@@ -111,8 +120,28 @@ document.addEventListener("click", (e) => {
     const id = e.target.dataset.id;
     const nombreMascota = e.target.dataset.nombre;
     registroDiv.innerHTML=""
+    registroDiv.idMascota=id;
+    registroDiv.nombreMascota=nombreMascota
     formularioAdopcion.style.display="block";
-    infoMascotaAdoptar.innerHTML="Id Mascota: "+id+"<p>                   Nombre Mascota: "+nombreMascota
+    infoMascotaAdoptar.innerHTML="Id Mascota: "+registroDiv.idMascota+"<p>                   Nombre Mascota: "+nombreMascota
+    mostrarFormBtn.style.display = "none";
+    mostrarMascotasBtn.style.display = "none";
+    return;
 
   }
+});
+btnRegistroAplicacion.addEventListener("click", () => {
+  const aplicacion= registrarAplicacion(registroDiv.idMascota,registroDiv.nombreMascota,ciInput.value,nomApInput.value, correoInput.value,numeroApInput.value,razonInput.value)
+  
+  divAplicacion.innerHTML=aplicacion
+
+  if (aplicacion === "Ingrese todos los parametros requeridos porfavor") {
+    mostrarFormBtn.style.display = "none";
+    mostrarMascotasBtn.style.display = "none";
+    return;
+  }
+  mostrarFormBtn.style.display = "block";
+    mostrarMascotasBtn.style.display = "block";
+  formularioAdopcion.style.display ="none"
+  AplicacionesGlobales.push(aplicacion)
 });
