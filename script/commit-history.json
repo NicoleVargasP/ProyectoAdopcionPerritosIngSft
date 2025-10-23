@@ -1,16 +1,35 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "6b8630727f822ec8c622ed40ad0c2a0dc1325351",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T04:55:12.000Z",
       "message": "fix: correccion de pruebas",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/6b8630727f822ec8c622ed40ad0c2a0dc1325351"
     },
     "stats": {
       "total": 66,
       "additions": 59,
       "deletions": 7,
+      "date": "2025-10-23"
+    },
+    "coverage": 85.71,
+    "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-23T05:07:10.000Z",
+      "message": "fix: correccion de errores en las pruebas de cypress",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 12,
+      "deletions": 2,
       "date": "2025-10-23"
     },
     "coverage": 85.71,
