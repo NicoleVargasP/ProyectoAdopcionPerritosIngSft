@@ -28,7 +28,7 @@ describe("Pruebas de registro y visualización de mascotas", () => {
     cy.get("#edad").type("3");
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("Juguetón");
-    cy.get("#contacto").type("555-123");
+    cy.get("#contacto").type("555-123784");
     cy.get("#mascota-form").submit();
 
     cy.get("#registro-mascotas").should("contain.text", "Se registró la mascota con éxito");

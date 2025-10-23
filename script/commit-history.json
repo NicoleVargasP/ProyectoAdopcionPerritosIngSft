@@ -190,12 +190,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "cb881467d2796cec5d3cd48b5d4afa5b88d44ebb",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T07:21:16.000Z",
       "message": "Merge branch 'main' of https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/cb881467d2796cec5d3cd48b5d4afa5b88d44ebb"
     },
     "stats": {
       "total": 10,
@@ -205,6 +205,25 @@
     },
     "coverage": 100,
     "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-23T08:26:12.000Z",
+      "message": "refactor: mejora de validaciones en registrar",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 63,
+      "additions": 44,
+      "deletions": 19,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }

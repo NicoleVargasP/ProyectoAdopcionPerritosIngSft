@@ -14,6 +14,13 @@ export default function registrarMascota(id, nom, edad, especie, descripcion, co
  if (edad !== "Sin edad asignada" && isNaN(Number(edad))) {
   return "La edad debe ser un número o 'Sin edad asignada'.";
 }
+  const telefonoRegex = /^(\+?\d{7,15}|\d{3}-\d{6,10})$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!telefonoRegex.test(contacto) && !emailRegex.test(contacto)) {
+    return "El contacto debe ser un número telefónico o un correo electrónico válido.";
+  }
+
   // Validar que ID sea único
   if (mascotasRegistradas.some(m => m.id === id)) {
     return "El ID ya está registrado.";
