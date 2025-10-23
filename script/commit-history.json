@@ -38,17 +38,55 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f95b810613294951cf06068f4918ddf851f8360f1",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-23T05:22:07.000Z",
+      "message": "feat: se agrego la funcion buscar mascota",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 40,
+      "additions": 38,
+      "deletions": 2,
+      "date": "2025-10-23"
+    },
+    "coverage": 85.71,
+    "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "ee08ffc72f5dba2f90de0dbe0c76c433eaa7b513",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-23T05:26:49.000Z",
       "message": "feat: creacion formulario de adopcion(no funcional)",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/ee08ffc72f5dba2f90de0dbe0c76c433eaa7b513"
     },
     "stats": {
       "total": 18,
       "additions": 17,
       "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 85.71,
+    "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T05:31:05.000Z",
+      "message": "commit para merge",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 40,
+      "additions": 38,
+      "deletions": 2,
       "date": "2025-10-23"
     },
     "coverage": 85.71,
