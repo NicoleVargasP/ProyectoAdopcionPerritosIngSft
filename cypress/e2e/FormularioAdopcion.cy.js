@@ -1,11 +1,8 @@
-describe("Registrar Mascotas", () => {
+describe("Formulario Adopcion", () => {
     beforeEach(() => {
     cy.visit("/"); // abre la página principal (usa baseUrl del config)
     
   });
-
-
-
   
   it("Deberia mostrar un boton para ir al formulario de adopcion de una mascota", () => {
     cy.get("#mostrar-registrar-btn").click(); // muestra los inputs
@@ -22,7 +19,6 @@ describe("Registrar Mascotas", () => {
     cy.get("#mostrar-mascotas-btn").click();
 
     cy.get(".btn-adoptar").should("exist").and("be.visible");
-
   });
 
 

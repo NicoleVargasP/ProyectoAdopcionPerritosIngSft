@@ -18,7 +18,7 @@ export default function mostrarMascotas(mascotas) {
         <button 
           class="btn-adoptar" 
           data-id="${m.id}"
-          data- nom= "${m.nombre}"
+          data-nombre= "${m.nombre}"
           style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
           Formulario Adopcion
         </button>

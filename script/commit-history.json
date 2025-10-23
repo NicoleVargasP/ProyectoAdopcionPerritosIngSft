@@ -1,16 +1,35 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "98625e711517b0465039956152d62757f476aeb4",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T04:15:58.000Z",
       "message": "test: Refactorizacion de pruebas en mostrar y registrar",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/98625e711517b0465039956152d62757f476aeb4"
     },
     "stats": {
       "total": 43,
       "additions": 43,
       "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 57.14,
+    "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T04:44:52.000Z",
+      "message": "feat: mascota inicial en el sistema",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 66,
+      "additions": 59,
+      "deletions": 7,
       "date": "2025-10-23"
     },
     "coverage": 57.14,
