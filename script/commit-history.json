@@ -266,17 +266,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "932c09ebd914bddec826be450c2ee683afed63e8",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-23T12:47:30.000Z",
       "message": "fix: vistas de elementos",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/932c09ebd914bddec826be450c2ee683afed63e8"
     },
     "stats": {
       "total": 42,
       "additions": 24,
       "deletions": 18,
+      "date": "2025-10-23"
+    },
+    "coverage": 96.3,
+    "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T13:47:32.000Z",
+      "message": "fix: Buscar funcional",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 24,
+      "additions": 15,
+      "deletions": 9,
       "date": "2025-10-23"
     },
     "coverage": 96.3,

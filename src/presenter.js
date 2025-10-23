@@ -71,7 +71,7 @@ Registrarform.addEventListener("submit", (event) => {
   registroDiv.style.display = "block";
   registroDiv.innerHTML = `<p>${mensaje}</p>`;
 
-  // Si faltan datos, mantener el formulario visible
+  // Si sale error que se mantenta el formulario
   if (mensaje.exito == false) {
     Registrarform.style.display = "block";
     mostrarFormBtn.style.display = "none";
@@ -87,6 +87,19 @@ Registrarform.addEventListener("submit", (event) => {
   registroDiv.innerHTML = html;
   busquedaContainer.style.display = "block";
 });*/
+
+
+  // Si se registró correctamente, guardar mascota y volver a los botones
+  const mascota = { id, nombre, edad, especie, descripcion, contacto };
+  mascotasGlobales.push(mascota);
+
+  Registrarform.reset();
+  Registrarform.style.display = "none";
+  mostrarFormBtn.style.display = "block";
+  mostrarMascotasBtn.style.display = "block";
+});
+
+
 buscarBtn.addEventListener("click", () => {
   const terminoBusqueda = parametroBusquedaInput.value.toLowerCase();
 
@@ -103,15 +116,8 @@ buscarBtn.addEventListener("click", () => {
   registroDiv.innerHTML = html;
 });
 
-  // Si se registró correctamente, guardar mascota y volver a los botones
-  const mascota = { id, nombre, edad, especie, descripcion, contacto };
-  mascotasGlobales.push(mascota);
 
-  Registrarform.reset();
-  Registrarform.style.display = "none";
-  mostrarFormBtn.style.display = "block";
-  mostrarMascotasBtn.style.display = "block";
-});
+
 
 // Mostrar todas las mascotas registradas
 mostrarMascotasBtn.addEventListener("click", () => {
