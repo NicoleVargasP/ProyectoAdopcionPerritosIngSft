@@ -228,17 +228,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "aba79a87bd22d3d1f268d12ec4749ed073454241",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T08:58:08.000Z",
       "message": "refactor: mejora de validaciones para el formulario y el registro",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/aba79a87bd22d3d1f268d12ec4749ed073454241"
     },
     "stats": {
       "total": 220,
       "additions": 126,
       "deletions": 94,
+      "date": "2025-10-23"
+    },
+    "coverage": 96.3,
+    "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T09:25:34.000Z",
+      "message": "refactor: presenter",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 8,
+      "deletions": 3,
       "date": "2025-10-23"
     },
     "coverage": 96.3,

@@ -51,6 +51,8 @@ mostrarFormBtn.addEventListener("click", () => {
   mostrarFormBtn.style.display = "none";
   mostrarMascotasBtn.style.display = "none";
   registroDiv.innerHTML=" ";
+  divAplicacion.style.display="none";
+
 });
 
 // Registrar una nueva mascota
@@ -78,11 +80,11 @@ Registrarform.addEventListener("submit", (event) => {
   }
 
 // Mostrar todas las mascotas registradas
-mostrarMascotasBtn.addEventListener("click", () => {
+/*mostrarMascotasBtn.addEventListener("click", () => {
   const html = mostrarMascotas(mascotasGlobales);
   registroDiv.innerHTML = html;
   busquedaContainer.style.display = "block";
-});
+});*/
 buscarBtn.addEventListener("click", () => {
   const terminoBusqueda = parametroBusquedaInput.value.toLowerCase();
 
@@ -113,6 +115,8 @@ buscarBtn.addEventListener("click", () => {
 mostrarMascotasBtn.addEventListener("click", () => {
   const html = mostrarMascotas(mascotasGlobales);
   registroDiv.innerHTML = html;
+  busquedaContainer.style.display = "block"
+  divAplicacion.style.display="none"
 });
 //si se presiona el boton adoptar
 document.addEventListener("click", (e) => {
@@ -134,7 +138,7 @@ btnRegistroAplicacion.addEventListener("click", () => {
   const aplicacion= registrarAplicacion(registroDiv.idMascota,registroDiv.nombreMascota,ciInput.value,nomApInput.value, correoInput.value,numeroApInput.value,razonInput.value)
   
   divAplicacion.innerHTML=aplicacion
-
+  divAplicacion.style.display="block"
   if (aplicacion === "Ingrese todos los parametros requeridos porfavor") {
     mostrarFormBtn.style.display = "none";
     mostrarMascotasBtn.style.display = "none";
@@ -144,4 +148,5 @@ btnRegistroAplicacion.addEventListener("click", () => {
     mostrarMascotasBtn.style.display = "block";
   formularioAdopcion.style.display ="none"
   AplicacionesGlobales.push(aplicacion)
+  formularioAdopcion.reset();
 });
