@@ -14,7 +14,7 @@ describe("Formulario Adopcion", () => {
     cy.get("#descripcion").type("Es adorable");
     cy.get("#contacto").type("98766543");
     
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar registrar mascota
+    cy.get('input[type="submit"]').first().click(); // presiona el botón para enviar registrar mascota
 
     cy.get("#mostrar-mascotas-btn").click();
 

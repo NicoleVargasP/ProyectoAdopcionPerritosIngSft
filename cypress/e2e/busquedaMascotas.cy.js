@@ -14,7 +14,7 @@ describe("Búsqueda de Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("Juguetón y amigable");
     cy.get("#contacto").type("12345678");
-    cy.get('input[type="submit"]').click();
+    cy.get('input[type="submit"]').first().click();
 
     // --- Mascota 2: Gato llamado Mishi ---
     cy.get("#mostrar-registrar-btn").click();
@@ -24,7 +24,7 @@ describe("Búsqueda de Mascotas", () => {
     cy.get("#especie").type("Gato");
     cy.get("#descripcion").type("Duerme mucho");
     cy.get("#contacto").type("87654321");
-    cy.get('input[type="submit"]').click();
+    cy.get('input[type="submit"]').first().click();
   });
 
   it("Debería encontrar una mascota al buscar por su nombre exacto", () => {

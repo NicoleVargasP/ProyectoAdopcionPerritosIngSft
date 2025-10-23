@@ -193,14 +193,14 @@
     "sha": "HEAD",
     "author": "Nicole Vargas",
     "commit": {
-      "date": "2025-10-23T07:17:38.000Z",
-      "message": "fix:correcion  errores",
+      "date": "2025-10-23T07:21:16.000Z",
+      "message": "Merge branch 'main' of https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft",
       "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
     },
     "stats": {
-      "total": 13,
-      "additions": 0,
-      "deletions": 13,
+      "total": 10,
+      "additions": 5,
+      "deletions": 5,
       "date": "2025-10-23"
     },
     "coverage": 100,
