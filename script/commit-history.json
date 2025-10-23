@@ -19,17 +19,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f95b810613294951cf06068f4918ddf851f8360f",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T05:07:10.000Z",
       "message": "fix: correccion de errores en las pruebas de cypress",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/f95b810613294951cf06068f4918ddf851f8360f"
     },
     "stats": {
       "total": 14,
       "additions": 12,
       "deletions": 2,
+      "date": "2025-10-23"
+    },
+    "coverage": 85.71,
+    "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T05:26:49.000Z",
+      "message": "feat: creacion formulario de adopcion(no funcional)",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 18,
+      "additions": 17,
+      "deletions": 1,
       "date": "2025-10-23"
     },
     "coverage": 85.71,
