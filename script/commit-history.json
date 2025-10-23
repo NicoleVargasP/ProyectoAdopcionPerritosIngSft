@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "fcdabdb14aa76df59202d4b01207afde00b84f62",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-10-23T05:31:05.000Z",
       "message": "commit para merge",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/fcdabdb14aa76df59202d4b01207afde00b84f62"
     },
     "stats": {
       "total": 40,
@@ -91,6 +91,25 @@
     },
     "coverage": 85.71,
     "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-23T05:44:46.000Z",
+      "message": "refactor: mejoras en validaciones de registro de mascota y en algunas pruebas",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 13,
+      "deletions": 8,
+      "date": "2025-10-23"
+    },
+    "coverage": 85.71,
+    "test_count": 8,
     "failed_tests": 0,
     "conclusion": "success"
   }

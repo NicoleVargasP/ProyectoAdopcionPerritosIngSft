@@ -28,10 +28,16 @@ test("Debe devolver error si todos los campos son nulos", () => {
     expect(resultado).toBe("El ID debe ser un número.");
   });
 
-  test("Debe devolver error si la edad no es un número", () => {
-    const resultado = registrarMascota(1, "Firulais", "tres", "Perro", "Juguetón", "555-123", []);
-    expect(resultado).toBe("La edad debe ser un número.");
-  });
+test("Debe permitir 'Sin edad asignada' como opción válida", () => {
+  const resultado = registrarMascota(1, "Firulais", "Sin edad asignada", "Perro", "Juguetón", "555-123");
+  expect(resultado).toContain("Se registró la mascota con éxito");
+});
+
+
+test("Debe devolver error si la edad no es un número ni 'Sin edad asignada'", () => {
+  const resultado = registrarMascota(1, "Firulais", "tres", "Perro", "Juguetón", "555-123");
+  expect(resultado).toBe("La edad debe ser un número o 'Sin edad asignada'.");
+});
 
   test("Debe devolver error si el ID ya existe", () => {
     const mascotasRegistradas = [{ id: "1", nombre: "Rex" }];

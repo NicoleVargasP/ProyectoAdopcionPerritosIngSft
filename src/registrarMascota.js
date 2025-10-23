@@ -11,10 +11,9 @@ export default function registrarMascota(id, nom, edad, especie, descripcion, co
   }
 
   // Validar que Edad sea número
-  if (isNaN(edad)) {
-    return "La edad debe ser un número.";
-  }
-
+ if (edad !== "Sin edad asignada" && isNaN(Number(edad))) {
+  return "La edad debe ser un número o 'Sin edad asignada'.";
+}
   // Validar que ID sea único
   if (mascotasRegistradas.some(m => m.id === id)) {
     return "El ID ya está registrado.";
