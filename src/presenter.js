@@ -25,6 +25,11 @@ const registroDiv = document.querySelector("#registro-mascotas");
 const mostrarFormBtn = document.querySelector("#mostrar-registrar-btn");
 const mostrarMascotasBtn = document.querySelector("#mostrar-mascotas-btn");
 
+const busquedaContainer = document.querySelector("#busqueda-container");
+const parametroBusquedaInput = document.querySelector("#parametro-busqueda");
+const buscarBtn = document.querySelector("#buscar-btn");
+
+
 
 const infoMascotaAdoptar =document.querySelector("#info-mascota-adoptar")
 const formularioAdopcion =document.querySelector("#adoptar-form")
@@ -63,6 +68,28 @@ Registrarform.addEventListener("submit", (event) => {
     return;
   }
 
+// Mostrar todas las mascotas registradas
+mostrarMascotasBtn.addEventListener("click", () => {
+  const html = mostrarMascotas(mascotasGlobales);
+  registroDiv.innerHTML = html;
+  busquedaContainer.style.display = "block";
+});
+buscarBtn.addEventListener("click", () => {
+  const terminoBusqueda = parametroBusquedaInput.value.toLowerCase();
+
+  // Filtramos la lista de mascotas
+  const mascotasFiltradas = mascotasGlobales.filter(mascota => {
+    const nombre = mascota.nombre.toLowerCase();
+    const especie = mascota.especie.toLowerCase();
+    // Devuelve true si el término de búsqueda está incluido en el nombre O en la especie
+    return nombre.includes(terminoBusqueda) || especie.includes(terminoBusqueda);
+  });
+  
+  // Aqui volvi a usar mostrarMascotas con la lista ya filtrada
+  const html = mostrarMascotas(mascotasFiltradas);
+  registroDiv.innerHTML = html;
+});
+
   // Si se registró correctamente, guardar mascota y volver a los botones
   const mascota = { id, nombre, edad, especie, descripcion, contacto };
   mascotasGlobales.push(mascota);
@@ -86,8 +113,6 @@ document.addEventListener("click", (e) => {
     registroDiv.innerHTML=""
     formularioAdopcion.style.display="block";
     infoMascotaAdoptar.innerHTML="Id Mascota: "+id+"<p>                   Nombre Mascota: "+nombreMascota
-
-
 
   }
 });
