@@ -95,17 +95,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "88630e391557166a54d9d9c629ddef58a05d72c9",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T05:44:46.000Z",
       "message": "refactor: mejoras en validaciones de registro de mascota y en algunas pruebas",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/88630e391557166a54d9d9c629ddef58a05d72c9"
     },
     "stats": {
       "total": 21,
       "additions": 13,
       "deletions": 8,
+      "date": "2025-10-23"
+    },
+    "coverage": 85.71,
+    "test_count": 8,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-10-23T06:05:15.000Z",
+      "message": "test: se añadio nuevas pruebas en cypress",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 47,
+      "additions": 47,
+      "deletions": 0,
       "date": "2025-10-23"
     },
     "coverage": 85.71,
