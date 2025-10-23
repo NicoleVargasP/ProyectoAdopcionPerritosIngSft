@@ -1,8 +1,6 @@
 // cypress/e2e/busquedaMascotas.cy.js
 
 describe("Búsqueda de Mascotas", () => {
-  // Antes de CADA prueba 'it', vamos a registrar dos mascotas diferentes.
-  // Esto nos asegura que siempre tenemos datos con los que probar la búsqueda.
   beforeEach(() => {
     cy.visit("/"); // Abre la página principal
 
