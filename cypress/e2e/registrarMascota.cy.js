@@ -1,96 +1,87 @@
-describe("Registrar Mascotas", () => {
-    beforeEach(() => {
-    cy.visit("/"); // abre la página principal (usa baseUrl del config)
-    cy.get("#mostrar-registrar-btn").click(); // muestra los inputs
-  });
+// cypress/e2e/busquedaMascotas.cy.js
 
-//id, nombre, edad, especie, descripcion, contacto
+describe("Búsqueda de Mascotas", () => {
+  // Antes de CADA prueba 'it', vamos a registrar dos mascotas diferentes.
+  // Esto nos asegura que siempre tenemos datos con los que probar la búsqueda.
+  beforeEach(() => {
+    cy.visit("/"); // Abre la página principal
 
-  it("Si el id y el nombre estan vacio, debe mostrar un mensaje de error", () => {
-    // Dejar el campo vacío
-    cy.get("#id").clear();
-    cy.get("#nombre").clear();
-    cy.get("#edad").type(2);
+    // --- Mascota 1: Perro llamado Bobby ---
+    cy.get("#mostrar-registrar-btn").click();
+    cy.get("#id").type("001");
+    cy.get("#nombre").type("Bobby");
+    cy.get("#edad").type("3");
     cy.get("#especie").type("Perro");
-    cy.get("#descripcion").type("El perrito es muy cariñoso");
-    cy.get("#contacto").type(7498657);
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
-  });
-   it("Si la edad esta vacia, debe mostrar un mensaje de error", () => {
-    // Dejar el campo vacío
-    cy.get("#id").type(12345);
-    cy.get("#nombre").type("fifi");
-    cy.get("#edad").clear();
-    cy.get("#especie").type("Perro");
-    cy.get("#descripcion").type("El perrito es muy cariñoso");
-    cy.get("#contacto").type(7498657);
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
-  });
+    cy.get("#descripcion").type("Juguetón y amigable");
+    cy.get("#contacto").type("12345678");
+    cy.get('input[type="submit"]').click();
 
-  it("Si la especie esta vacia, debe mostrar un mensaje de error", () => {
-    // Dejar el campo vacío
-    cy.get("#id").type(12345);
-    cy.get("#nombre").type("fifi");
+    // --- Mascota 2: Gato llamado Mishi ---
+    cy.get("#mostrar-registrar-btn").click();
+    cy.get("#id").type("002");
+    cy.get("#nombre").type("Mishi");
     cy.get("#edad").type("5");
-    cy.get("#especie").clear();
-    cy.get("#descripcion").type("El perrito es muy cariñoso");
-    cy.get("#contacto").type(7498657);
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
-  });
-  it("Si la descripcion y el contacto estan vacios, debe mostrar un mensaje de error", () => {
-    // Dejar el campo vacío
-    cy.get("#id").type(12345);
-    cy.get("#nombre").type("fifi");
-    cy.get("#edad").type("5");
-    cy.get("#especie").type("Perro");
-    cy.get("#descripcion").clear();
-    cy.get("#contacto").clear();
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
+    cy.get("#especie").type("Gato");
+    cy.get("#descripcion").type("Duerme mucho");
+    cy.get("#contacto").type("87654321");
+    cy.get('input[type="submit"]').click();
   });
 
-  it("Si llena el campo nombre y edad indica que se guardo como nombre y edad", () => {
-    // Dejar el campo vacío
-    cy.get("#nombre").type("Firulais");
-     cy.get("#edad").type("13");
-     cy.get("#id").type(12345);
-    cy.get("#especie").type("Perro");
-    cy.get("#descripcion").type("El perrito es muy cariñoso");
-    cy.get("#contacto").type(7498657);
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Nombre: Firulais", "Edad: 13");
-  });
- it("Si llena el campo id y especie indica que se guardo como id y especie", () => {
-    // Dejar el campo vacío
-    cy.get("#nombre").type("Firulais");
-     cy.get("#edad").type("13");
-    cy.get("#id").type(12345);
-    cy.get("#especie").type("Perro");
-    cy.get("#descripcion").type("El perrito es muy cariñoso");
-    cy.get("#contacto").type(7498657);
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Id: 12345", "Especie: Perro");
-  });
-   it("Si llena el campo descripcion y contacto indica que se guardo como id y especie", () => {
-    // Dejar el campo vacío
-    cy.get("#nombre").type("Firulais");
-     cy.get("#edad").type("13");
-    cy.get("#id").type(12345);
-    cy.get("#especie").type("Perro");
-    cy.get("#descripcion").type("El perrito es muy cariñoso");
-    cy.get("#contacto").type(7498657);
-    cy.get('input[type="submit"]').click(); // presiona el botón para enviar
-    // Verificar mensaje de error
-    cy.get("#registro-mascotas").should("contain", "Descripcion: El perrito es muy cariñoso", "Contacto: 7498657");
+  it("Debería encontrar una mascota al buscar por su nombre exacto", () => {
+    // 1. Ir a la sección de ver mascotas para que aparezca la búsqueda
+    cy.get("#mostrar-mascotas-btn").click();
+
+    // 2. Escribir en el campo de búsqueda y presionar el botón
+    cy.get("#parametro-busqueda").type("Bobby");
+    cy.get("#buscar-btn").click();
+
+    // 3. Verificar los resultados
+    cy.get("#registro-mascotas").should("contain", "Bobby"); // Bobby debe estar visible
+    cy.get("#registro-mascotas").should("not.contain", "Mishi"); // Mishi no debe estar visible
   });
 
+  it("Debería encontrar todas las mascotas de una misma especie al buscar", () => {
+    // 1. Ir a la sección de ver mascotas
+    cy.get("#mostrar-mascotas-btn").click();
+
+    // 2. Buscar por la especie "Perro"
+    cy.get("#parametro-busqueda").type("Perro");
+    cy.get("#buscar-btn").click();
+
+    // 3. Verificar los resultados
+    cy.get("#registro-mascotas").should("contain", "Bobby");
+    cy.get("#registro-mascotas").should("not.contain", "Mishi");
+  });
+
+  it("No debería mostrar resultados si la búsqueda no coincide con ninguna mascota", () => {
+    // 1. Ir a la sección de ver mascotas
+    cy.get("#mostrar-mascotas-btn").click();
+
+    // 2. Buscar por un término que no existe, como "Loro"
+    cy.get("#parametro-busqueda").type("Loro");
+    cy.get("#buscar-btn").click();
+
+    // 3. Verificar que ninguna de las mascotas registradas aparece
+    cy.get("#registro-mascotas").should("not.contain", "Bobby");
+    cy.get("#registro-mascotas").should("not.contain", "Mishi");
+  });
+  
+  it("Debería mostrar todas las mascotas de nuevo si se realiza una búsqueda vacía después de un filtro", () => {
+    // 1. Ir a la sección de ver mascotas y hacer una búsqueda inicial
+    cy.get("#mostrar-mascotas-btn").click();
+    cy.get("#parametro-busqueda").type("Bobby");
+    cy.get("#buscar-btn").click();
+
+    // Verificar que el filtro inicial funcionó
+    cy.get("#registro-mascotas").should("contain", "Bobby");
+    cy.get("#registro-mascotas").should("not.contain", "Mishi");
+    
+    // 2. Limpiar el campo y buscar de nuevo (búsqueda vacía)
+    cy.get("#parametro-busqueda").clear(); // Limpia el input
+    cy.get("#buscar-btn").click();
+
+    // 3. Verificar que ambas mascotas están visibles de nuevo
+    cy.get("#registro-mascotas").should("contain", "Bobby");
+    cy.get("#registro-mascotas").should("contain", "Mishi");
+  });
 });
