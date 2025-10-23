@@ -171,18 +171,37 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "8cc63b4415ee776e44d8db1372b9607ffd53b6fd",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-22T20:52:12.000Z",
       "message": "refactor: se mejoro el index para que ahora pueda asignar o no valores pero que sigan siendo campos obligatorios",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/8cc63b4415ee776e44d8db1372b9607ffd53b6fd"
     },
     "stats": {
       "total": 52,
       "additions": 39,
       "deletions": 13,
       "date": "2025-10-22"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T03:54:47.000Z",
+      "message": "feat:Boton(no funcional) de formulario de adopcion de mascotas",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 43,
+      "additions": 43,
+      "deletions": 0,
+      "date": "2025-10-23"
     },
     "coverage": 0,
     "test_count": 0,
