@@ -171,12 +171,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e44584654dcc477a9b30effbeb92558ac4bef97b",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T06:16:06.000Z",
       "message": "refactor: mejorando pruebas en jest para mostrar",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/e44584654dcc477a9b30effbeb92558ac4bef97b"
     },
     "stats": {
       "total": 39,
@@ -186,6 +186,25 @@
     },
     "coverage": 100,
     "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T07:12:03.000Z",
+      "message": "refactor: se arreglo errores de cypress",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 5,
+      "deletions": 12,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 7,
     "failed_tests": 0,
     "conclusion": "success"
   }
