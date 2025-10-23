@@ -190,12 +190,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "cb881467d2796cec5d3cd48b5d4afa5b88d44ebb",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-10-23T07:21:16.000Z",
       "message": "Merge branch 'main' of https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/cb881467d2796cec5d3cd48b5d4afa5b88d44ebb"
     },
     "stats": {
       "total": 10,
@@ -205,6 +205,25 @@
     },
     "coverage": 100,
     "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-10-23T08:22:12.000Z",
+      "message": "feat: Registro y guardado de peticiones de adopcion",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 70,
+      "additions": 62,
+      "deletions": 8,
+      "date": "2025-10-23"
+    },
+    "coverage": 89.47,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }
