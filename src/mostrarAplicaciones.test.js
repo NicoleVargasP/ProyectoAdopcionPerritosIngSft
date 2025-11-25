@@ -5,7 +5,7 @@ describe("Función mostrarAplicaciones", () => {
   
   test("Debe devolver el mensaje si no hay aplicaciones", () => {
     const resultado = mostrarAplicaciones([]);
-    expect(resultado).toBe("<p>No hay Aplicaciones de Adopcion registradas todavía.</p>");
+    expect(resultado).toBe("<p>No hay Aplicaciones de Adopción registradas todavía.</p>");
   });
   
 
@@ -78,8 +78,8 @@ describe("Función mostrarAplicaciones", () => {
 
     const resultado = mostrarAplicaciones(aplicacion);
 
-    expect(resultado).toContain("Aceptar Peticion");
-    expect(resultado).toContain("Negar Peticion");
+    expect(resultado).toContain("Aceptar Petición");
+    expect(resultado).toContain("Negar Petición");
   });
 
 test("NO Debe generar botones si la aplicacion esta ya fue Negada", () => {
@@ -100,7 +100,5 @@ test("NO Debe generar botones si la aplicacion esta ya fue Negada", () => {
 
     expect(resultado).not.toContain("Aceptar Peticion");
   });
-
-
 
   });

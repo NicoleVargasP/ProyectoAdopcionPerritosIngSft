@@ -323,12 +323,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "867f799c42af7b242cbf17e49ef1ac8d11d65ea6",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-11-25T10:12:48.000Z",
       "message": "refactor: deshacer codigo basura en presenter",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/867f799c42af7b242cbf17e49ef1ac8d11d65ea6"
     },
     "stats": {
       "total": 16,
@@ -375,6 +375,25 @@
       "date": "2025-11-25"
     },
     "coverage": 96.92,
+    "test_count": 24,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-11-25T10:37:29.000Z",
+      "message": "refactor: refactorizacion de mostrar aplicacion",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 79,
+      "additions": 39,
+      "deletions": 40,
+      "date": "2025-11-25"
+    },
+    "coverage": 97.1,
     "test_count": 24,
     "failed_tests": 0,
     "conclusion": "success"
