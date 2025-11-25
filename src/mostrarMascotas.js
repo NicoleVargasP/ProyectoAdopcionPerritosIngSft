@@ -1,34 +1,44 @@
-export default function mostrarMascotas(mascotas) {
+// --- Función interna para generar una tarjeta simple ---
+function tarjetaMascota(m) {
+  const id = m.id;
+  const nombre = m.nombre;
+  const edad = m.edad;
+  const especie = m.especie;
+  const descripcion = m.descripcion;
+  const contacto = m.contacto;
+  const estado = m.estado;
+
+  // si está disponible, incluye botón
+  const boton =
+    estado === "Disponible"
+      ? `<button
+           class="btn-adoptar"
+           data-id="${id}"
+           data-nombre="${nombre}"
+           style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
+           Formulario Adopción
+         </button>`
+      : "";
+
+  return `
+    <div style="border:1px solid #ccc; padding:10px; border-radius:10px; margin:8px 0;">
+      <p><b>Id:</b> ${id}</p>
+      <p><b>Nombre:</b> ${nombre}</p>
+      <p><b>Edad:</b> ${edad}</p>
+      <p><b>Especie:</b> ${especie}</p>
+      <p><b>Descripción:</b> ${descripcion}</p>
+      <p><b>Contacto:</b> ${contacto}</p>
+      <p><b>Estado:</b> ${estado}</p>
+      ${boton}
+    </div>
+  `;
+}
+
+// --- Función principal exportada ---
+export default function mostrarMascotas(mascotas = []) {
   if (!mascotas || mascotas.length === 0) {
     return "<p>No hay mascotas registradas todavía.</p>";
   }
 
-  return mascotas
-    .map(
-      (m) => `
-      <div style="border:1px solid #ccc; padding:10px; border-radius:10px; margin:8px 0;">
-        <p><b>Id:</b> ${m.id}</p>
-        <p><b>Nombre:</b> ${m.nombre}</p>
-        <p><b>Edad:</b> ${m.edad}</p>
-        <p><b>Especie:</b> ${m.especie}</p>
-        <p><b>Descripción:</b> ${m.descripcion}</p>
-        <p><b>Contacto:</b> ${m.contacto}</p>
-        <p><b>Estado:</b> ${m.estado}</p>
-
-        ${
-          m.estado === "Disponible"
-            ? `
-              <button 
-                class="btn-adoptar" 
-                data-id="${m.id}"
-                data-nombre="${m.nombre}"
-                style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
-                Formulario Adopción
-              </button>
-            `
-            : ""
-        }
-      </div>`
-    )
-    .join("");
+  return mascotas.map(tarjetaMascota).join("");
 }
