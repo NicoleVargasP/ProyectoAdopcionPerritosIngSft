@@ -40,5 +40,3 @@ export default function registrarMascota(
     "<p>Contacto: " + contacto + "</p>"
   );
 }
-
-
