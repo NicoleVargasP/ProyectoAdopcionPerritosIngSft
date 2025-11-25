@@ -228,12 +228,69 @@
     "conclusion": "success"
   },
   {
+    "sha": "9ea9843335a7d23aa83d87a51e32d69f78a4bdbb",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-11-25T09:16:28.000Z",
+      "message": "refactor: refactorizacion de mostrar mascota",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/9ea9843335a7d23aa83d87a51e32d69f78a4bdbb"
+    },
+    "stats": {
+      "total": 70,
+      "additions": 40,
+      "deletions": 30,
+      "date": "2025-11-25"
+    },
+    "coverage": 94.55,
+    "test_count": 21,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "11f3e5731cd9fa3a6b6aadb06e426aefbff71ad9",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-11-25T09:43:53.000Z",
+      "message": "refactor: refactorizacion de registrar apliacion con pruebas en verde",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/11f3e5731cd9fa3a6b6aadb06e426aefbff71ad9"
+    },
+    "stats": {
+      "total": 99,
+      "additions": 74,
+      "deletions": 25,
+      "date": "2025-11-25"
+    },
+    "coverage": 92.31,
+    "test_count": 21,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
     "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-11-25T09:47:15.000Z",
+      "message": "refactor: se añadio mas pruebas de test",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 26,
+      "additions": 23,
+      "deletions": 3,
+      "date": "2025-11-25"
+    },
+    "coverage": 96.92,
+    "test_count": 24,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "889ddf12fb0e1cf524cbfa018281ac04f15b2ab4",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-11-25T09:51:24.000Z",
       "message": "feat: Los botones de aceptar y negar aplicaciones funcionan y cambian el estado de las aplicaciones y mascotas",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/889ddf12fb0e1cf524cbfa018281ac04f15b2ab4"
     },
     "stats": {
       "total": 77,
@@ -243,6 +300,25 @@
     },
     "coverage": 93.62,
     "test_count": 21,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-11-25T09:53:50.000Z",
+      "message": "Merge branch 'main' of https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 195,
+      "additions": 137,
+      "deletions": 58,
+      "date": "2025-11-25"
+    },
+    "coverage": 96.92,
+    "test_count": 24,
     "failed_tests": 0,
     "conclusion": "success"
   }
