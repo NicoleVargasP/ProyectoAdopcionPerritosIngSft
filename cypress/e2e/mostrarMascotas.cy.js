@@ -42,7 +42,7 @@ describe("Pruebas de registro y visualización de mascotas", () => {
     cy.get("#edad").type("2");
     cy.get("#especie").type("Gato");
     cy.get("#descripcion").type("Dormilón");
-    cy.get("#contacto").type("111-222");
+    cy.get("#contacto").type("555-123784");
     cy.get("#mascota-form").submit();
 
     cy.get("#mostrar-registrar-btn").click();
@@ -51,7 +51,7 @@ describe("Pruebas de registro y visualización de mascotas", () => {
     cy.get("#edad").type("5");
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("Guardían");
-    cy.get("#contacto").type("333-444");
+    cy.get("#contacto").type("555-123784");
     cy.get("#mascota-form").submit();
 
     // Mostrar todas las mascotas

@@ -171,17 +171,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "44ff699b38799fe90bd202372181be8e3528ea27",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-11-25T07:31:39.000Z",
       "message": "refactor: cambio en los tests para que pasen",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/44ff699b38799fe90bd202372181be8e3528ea27"
     },
     "stats": {
       "total": 8,
       "additions": 4,
       "deletions": 4,
+      "date": "2025-11-25"
+    },
+    "coverage": 93.02,
+    "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-11-25T07:36:41.000Z",
+      "message": "refactor: arreglar errores en pruebas",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
       "date": "2025-11-25"
     },
     "coverage": 93.02,
