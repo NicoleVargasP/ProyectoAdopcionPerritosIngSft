@@ -21,10 +21,4 @@ describe("Formulario Adopcion", () => {
     cy.get(".btn-adoptar").should("exist").and("be.visible");
   });
 
-
-
-
-
-
-
 });
