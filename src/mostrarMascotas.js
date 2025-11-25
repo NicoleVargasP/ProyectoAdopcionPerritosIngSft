@@ -15,14 +15,19 @@ export default function mostrarMascotas(mascotas) {
         <p><b>Contacto:</b> ${m.contacto}</p>
         <p><b>Estado:</b> ${m.estado}</p>
 
-
-        <button 
-          class="btn-adoptar" 
-          data-id="${m.id}"
-          data-nombre= "${m.nombre}"
-          style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
-          Formulario Adopcion
-        </button>
+        ${
+          m.estado === "Disponible"
+            ? `
+              <button 
+                class="btn-adoptar" 
+                data-id="${m.id}"
+                data-nombre="${m.nombre}"
+                style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
+                Formulario Adopción
+              </button>
+            `
+            : ""
+        }
       </div>`
     )
     .join("");
