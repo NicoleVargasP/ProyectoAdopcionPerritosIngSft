@@ -38,16 +38,35 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "011afb918c4b687041a033df463c4395edc88055",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-11-25T04:18:53.000Z",
       "message": "feat: se añadio una clase mascota",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/011afb918c4b687041a033df463c4395edc88055"
     },
     "stats": {
       "total": 12,
       "additions": 12,
+      "deletions": 0,
+      "date": "2025-11-25"
+    },
+    "coverage": 96.3,
+    "test_count": 16,
+    "failed_tests": 6,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-11-25T04:23:52.000Z",
+      "message": "feat: se agrego un archivo validarMascota",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 54,
+      "additions": 54,
       "deletions": 0,
       "date": "2025-11-25"
     },
