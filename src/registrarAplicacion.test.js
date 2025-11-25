@@ -9,12 +9,12 @@ describe("Función registrarAplicacion", () => {
 
   test("Debe aceptar un número telefónico válido", () => {
     const resultado = registrarAplicacion(1, "Michi", "9876543", "Ana", "ana@mail.com", "555-123784", "Adopción");
-    expect(resultado.mensaje).toContain("Se registró la aplicacion con éxito");
+    expect(resultado.mensaje).toContain("Se registró la aplicación con éxito");
   });
 
   test("Debe aceptar un correo electrónico válido", () => {
     const resultado = registrarAplicacion(2, "Toby", "6543210", "Carlos", "carlos@mail.com", "+59176543210", "Adopción");
-    expect(resultado.mensaje).toContain("Se registró la aplicacion con éxito");
+    expect(resultado.mensaje).toContain("Se registró la aplicación con éxito");
   });
 
   test("Debe devolver error si el correo y número son inválidos", () => {

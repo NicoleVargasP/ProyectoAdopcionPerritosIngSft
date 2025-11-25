@@ -1,33 +1,53 @@
-export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, correo, numero, razon,AplicacionesRegistrada=[]) {
+import { validarAplicacion } from "./validarAplicacion.js";
+
+export default function registrarAplicacion(
+  IdMascota,
+  nomMascota,
+  ci,
+  nombre,
+  correo,
+  numero,
+  razon,
+  aplicacionesRegistradas = []
+) {
+  // Razon opcional
   if (!razon) {
     razon = "Sin Razon";
   }
 
-  if (!IdMascota || !nomMascota || !ci || !nombre || !correo || !numero) {
-    return {exito: false,mensaje: "Ingrese todos los parametros requeridos porfavor"};
+  // Validación
+  const error = validarAplicacion({ IdMascota, nomMascota, ci, nombre, correo, numero, razon }, aplicacionesRegistradas);
+  if (error != null) {
+    return { exito: false, mensaje: error };
   }
 
-  // Validaciones de correo y número telefónico
-  const telefonoRegex = /^(\+?\d{7,15}|\d{3}-\d{6,10})$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Crear aplicación con estado "Pendiente"
+  const aplicacion = {
+    IdMascota,
+    nomMascota,
+    ci,
+    nombre,
+    correo,
+    numero,
+    razon,
+    estado: "Pendiente"
+  };
 
-  if (!telefonoRegex.test(numero) && !emailRegex.test(correo)) {
-        return {exito: false,mensaje: "Ingrese un número telefónico o correo electrónico válido."};
-  }
-  const apli={IdMascota,nomMascota,ci,nombre,correo,numero,razon,estado: "Pendiente"}
+  // Guardar aplicación
+  aplicacionesRegistradas.push(aplicacion);
 
-  AplicacionesRegistrada.push(apli)
-
-  return {exito:true, mensaje:
-    "Se registró la aplicacion con éxito" +
-    "<p>Id Mascota: " + IdMascota + "</p>" +
-    "<p>Nombre Mascota: " + nomMascota + "</p>" +
-    "<p>Ci: " + ci + "</p>" +
-    "<p>Nombre: " + nombre + "</p>" +
-    "<p>Correo: " + correo + "</p>" +
-    "<p>Numero: " + numero + "</p>" +
-    "<p>Razon: " + razon + "</p>" +
-    "<p>Estado: " + apli.estado + "</p>"
-
+  // Construir mensaje HTML (igual que registrarMascota)
+  return {
+    exito: true,
+    mensaje:
+      "Se registró la aplicación con éxito" +
+      "<p>Id Mascota: " + IdMascota + "</p>" +
+      "<p>Nombre Mascota: " + nomMascota + "</p>" +
+      "<p>Ci: " + ci + "</p>" +
+      "<p>Nombre: " + nombre + "</p>" +
+      "<p>Correo: " + correo + "</p>" +
+      "<p>Numero: " + numero + "</p>" +
+      "<p>Razon: " + razon + "</p>" +
+      "<p>Estado: " + aplicacion.estado + "</p>"
   };
 }
