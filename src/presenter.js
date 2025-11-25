@@ -30,37 +30,37 @@ const aplicacionInicial={
 
 
 function esconderBotones(){
-    mostrarFormBtn.style.display = "none";
-  mostrarMascotasBtn.style.display = "none";
-  mostrarAplicacionesBtn.style.display="none";
+    btnMostrarFormMascotas.style.display = "none";
+  btnMostrarListaMascotas.style.display = "none";
+  btnMostrarListaAplicaciones.style.display="none";
 
 }
 function mostrarBotones(){
-  mostrarFormBtn.style.display = "block";
-  mostrarMascotasBtn.style.display = "block";
-  mostrarAplicacionesBtn.style.display="block";
+  btnMostrarFormMascotas.style.display = "block";
+  btnMostrarListaMascotas.style.display = "block";
+  btnMostrarListaAplicaciones.style.display="block";
 }
 
 mascotasGlobales.push(mascotaInicial)
 AplicacionesGlobales.push(aplicacionInicial)
 
-const Registrarform = document.querySelector("#mascota-form");
-const IdInput = document.querySelector("#id");
-const nombreInput = document.querySelector("#nombre");
-const edadInput = document.querySelector("#edad");
-const especieInput = document.querySelector("#especie");
-const descripcionInput = document.querySelector("#descripcion");
-const contactoInput = document.querySelector("#contacto");
+const formRegistrarMascota = document.querySelector("#mascota-form");
+const inputIdMascota = document.querySelector("#id");
+const inputNombreMascota = document.querySelector("#nombre");
+const inputEdadMascota = document.querySelector("#edad");
+const inputEspecieMascota = document.querySelector("#especie");
+const inputDescripcionMascota = document.querySelector("#descripcion");
+const inputContactoMascota = document.querySelector("#contacto");
 
-const registroDiv = document.querySelector("#registro-mascotas");
+const divRegistroMascotas = document.querySelector("#registro-mascotas");
 
-const mostrarFormBtn = document.querySelector("#mostrar-registrar-btn");
-const mostrarMascotasBtn = document.querySelector("#mostrar-mascotas-btn");
-const mostrarAplicacionesBtn =document.querySelector("#mostrar-aplicaciones-btn")
+const btnMostrarFormMascotas = document.querySelector("#mostrar-registrar-btn");
+const btnMostrarListaMascotas = document.querySelector("#mostrar-mascotas-btn");
+const btnMostrarListaAplicaciones =document.querySelector("#mostrar-aplicaciones-btn")
 
-const busquedaContainer = document.querySelector("#busqueda-container");
-const parametroBusquedaInput = document.querySelector("#parametro-busqueda");
-const buscarBtn = document.querySelector("#buscar-btn");
+const containerBuscadorMascotas = document.querySelector("#busqueda-container");
+const inputParametroBusqueda = document.querySelector("#parametro-busqueda");
+const btnBuscarMascota = document.querySelector("#buscar-btn");
 
 const infoMascotaAdoptar =document.querySelector("#info-mascota-adoptar")
 const formularioAdopcion =document.querySelector("#adoptar-form")
@@ -76,47 +76,47 @@ const ciInput = document.querySelector("#ciAplicante");
 
 
 // Mostrar el formulario al presionar el botón
-mostrarFormBtn.addEventListener("click", () => {
-  Registrarform.style.display = "block";
+btnMostrarFormMascotas.addEventListener("click", () => {
+  formRegistrarMascota.style.display = "block";
   esconderBotones();
-  registroDiv.innerHTML=" ";
-  busquedaContainer.style.display="none";
+  divRegistroMascotas.innerHTML=" ";
+  containerBuscadorMascotas.style.display="none";
   divAplicacion.style.display="none";
 
 });
 
 // Registrar una nueva mascota
-Registrarform.addEventListener("submit", (event) => {
+formRegistrarMascota.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const id = IdInput.value;
-  const nombre = nombreInput.value;
-  const edad = edadInput.value;
-  const especie = especieInput.value;
-  const descripcion = descripcionInput.value;
-  const contacto = contactoInput.value;
+  const id = inputIdMascota.value;
+  const nombre = inputNombreMascota.value;
+  const edad = inputEdadMascota.value;
+  const especie = inputEspecieMascota.value;
+  const descripcion = inputDescripcionMascota.value;
+  const contacto = inputContactoMascota.value;
 
   const mensaje = registrarMascota(id, nombre, edad, especie, descripcion, contacto, mascotasGlobales);
 
-  registroDiv.style.display = "block";
-  registroDiv.innerHTML = `<p>${mensaje}</p>`;
+  divRegistroMascotas.style.display = "block";
+  divRegistroMascotas.innerHTML = `<p>${mensaje}</p>`;
 
   // Si sale error que se mantenta el formulario
   if (!mensaje.includes("éxito")) {
-    Registrarform.style.display = "block";
+    formRegistrarMascota.style.display = "block";
     esconderBotones();
-    registroDiv.innerHTML ="Error: "+mensaje+"<p>"
+    divRegistroMascotas.innerHTML ="Error: "+mensaje+"<p>"
     return;
   }
-  registroDiv.innerHTML = `<p>${mensaje}</p>`;
-  Registrarform.reset();
-  Registrarform.style.display = "none";
+  divRegistroMascotas.innerHTML = `<p>${mensaje}</p>`;
+  formRegistrarMascota.reset();
+  formRegistrarMascota.style.display = "none";
   mostrarBotones();
 });
 
 
-buscarBtn.addEventListener("click", () => {
-  const terminoBusqueda = parametroBusquedaInput.value.toLowerCase();
+btnBuscarMascota.addEventListener("click", () => {
+  const terminoBusqueda = inputParametroBusqueda.value.toLowerCase();
 
   // Filtramos la lista de mascotas
   const mascotasFiltradas = mascotasGlobales.filter(mascota => {
@@ -128,18 +128,18 @@ buscarBtn.addEventListener("click", () => {
   
   // Aqui volvi a usar mostrarMascotas con la lista ya filtrada
   const html = mostrarMascotas(mascotasFiltradas);
-  registroDiv.innerHTML = html;
+  divRegistroMascotas.innerHTML = html;
 });
 
 
 
 
 // Mostrar todas las mascotas registradas
-mostrarMascotasBtn.addEventListener("click", () => {
+btnMostrarListaMascotas.addEventListener("click", () => {
   const html = mostrarMascotas(mascotasGlobales);
-  registroDiv.style.display="block"
-  registroDiv.innerHTML = html;
-  busquedaContainer.style.display = "block"
+  divRegistroMascotas.style.display="block"
+  divRegistroMascotas.innerHTML = html;
+  containerBuscadorMascotas.style.display = "block"
   divAplicacion.style.display="none"
 });
 //si se presiona el boton adoptar
@@ -147,26 +147,25 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-adoptar")) {
     const id = e.target.dataset.id;
     const nombreMascota = e.target.dataset.nombre;
-    registroDiv.innerHTML=""
-    registroDiv.idMascota=id;
-    registroDiv.nombreMascota=nombreMascota
+    divRegistroMascotas.innerHTML=""
+    divRegistroMascotas.idMascota=id;
+    divRegistroMascotas.nombreMascota=nombreMascota
     formularioAdopcion.style.display="block";
-    infoMascotaAdoptar.innerHTML="Id Mascota: "+registroDiv.idMascota+"<p>                   Nombre Mascota: "+nombreMascota
+    infoMascotaAdoptar.innerHTML="Id Mascota: "+divRegistroMascotas.idMascota+"<p>                   Nombre Mascota: "+nombreMascota
     esconderBotones();
-    busquedaContainer.style.display="none";
+    containerBuscadorMascotas.style.display="none";
     return;
 
   }
 });
 btnRegistroAplicacion.addEventListener("click", () => {
-  const aplicacion= registrarAplicacion(registroDiv.idMascota,registroDiv.nombreMascota,ciInput.value,nomApInput.value, correoInput.value,numeroApInput.value,razonInput.value,AplicacionesGlobales)
+  const aplicacion= registrarAplicacion(divRegistroMascotas.idMascota,divRegistroMascotas.nombreMascota,ciInput.value,nomApInput.value, correoInput.value,numeroApInput.value,razonInput.value,AplicacionesGlobales)
   console.log("hola")
   divAplicacion.style.display="block"
   divAplicacion.innerHTML=aplicacion.mensaje
 
   if (aplicacion.exito ==false) {
-    mostrarFormBtn.style.display = "none";
-    mostrarMascotasBtn.style.display = "none";
+    esconderBotones();
     divAplicacion.innerHTML=aplicacion.mensaje;
     return;
   }
@@ -176,11 +175,11 @@ btnRegistroAplicacion.addEventListener("click", () => {
   
 });
 
-mostrarAplicacionesBtn.addEventListener("click",()=>{
-  busquedaContainer.style.display="none";
+btnMostrarListaAplicaciones.addEventListener("click",()=>{
+  containerBuscadorMascotas.style.display="none";
   divAplicacion.innerHTML=mostrarAplicaciones(AplicacionesGlobales);
   divAplicacion.style.display="block"
-  registroDiv.style.display="none"
+  divRegistroMascotas.style.display="none"
 
 })
 
@@ -195,7 +194,7 @@ document.addEventListener("click", (e) => {
 
     divAplicacion.style.display="none";
     mostrarBotones();
-    busquedaContainer.style.display="none";
+    containerBuscadorMascotas.style.display="none";
   }
 });
 document.addEventListener("click", (e) => {
@@ -207,6 +206,6 @@ document.addEventListener("click", (e) => {
 
     divAplicacion.style.display="none";
     mostrarBotones();
-    busquedaContainer.style.display="none";
+    containerBuscadorMascotas.style.display="none";
   }
 });
