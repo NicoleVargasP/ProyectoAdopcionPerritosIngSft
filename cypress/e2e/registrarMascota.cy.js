@@ -1,7 +1,7 @@
 describe("Registrar Mascotas", () => {
   beforeEach(() => {
     cy.visit("/"); // abre la página principal
-    cy.get("#btnRegistrarMascota").click(); // muestra los inputs
+    cy.get("#mostrar-registrar-btn").click(); // muestra el formulario
   });
 
   it("Campos vacíos muestran mensaje de error", () => {
@@ -11,7 +11,7 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("El perrito es muy cariñoso");
     cy.get("#contacto").type(7498657);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click(); // submit real del form
     cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
   });
 
@@ -22,7 +22,7 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("El perrito es muy cariñoso");
     cy.get("#contacto").type(7498657);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click();
     cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
   });
 
@@ -33,7 +33,7 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").clear();
     cy.get("#descripcion").type("El perrito es muy cariñoso");
     cy.get("#contacto").type(7498657);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click();
     cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
   });
 
@@ -44,7 +44,7 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").clear();
     cy.get("#contacto").clear();
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click();
     cy.get("#registro-mascotas").should("contain", "Por favor, completa todos los campos.");
   });
 
@@ -55,7 +55,7 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("El perrito es muy cariñoso");
     cy.get("#contacto").type(7498657);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click();
     cy.get("#registro-mascotas").should("contain", "Nombre: Firulais");
     cy.get("#registro-mascotas").should("contain", "Edad: 13");
   });
@@ -67,7 +67,7 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("El perrito es muy cariñoso");
     cy.get("#contacto").type(7498657);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click();
     cy.get("#registro-mascotas").should("contain", "Id: 12346");
     cy.get("#registro-mascotas").should("contain", "Especie: Perro");
   });
@@ -79,9 +79,8 @@ describe("Registrar Mascotas", () => {
     cy.get("#especie").type("Perro");
     cy.get("#descripcion").type("El perrito es muy cariñoso");
     cy.get("#contacto").type(7498657);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[type="submit"]').click();
     cy.get("#registro-mascotas").should("contain", "Descripcion: El perrito es muy cariñoso");
     cy.get("#registro-mascotas").should("contain", "Contacto: 7498657");
   });
-
 });
