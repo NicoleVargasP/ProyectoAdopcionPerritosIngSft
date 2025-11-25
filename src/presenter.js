@@ -2,6 +2,7 @@ import registrarMascota from "./registrarMascota";
 import mostrarMascotas from "./mostrarMascotas";
 import registrarAplicacion from "./registrarAplicacion";
 import mostrarAplicaciones from "./mostrarAplicaciones";
+import { aceptarAplicacion, negarAplicacion } from "./respuestaAplicacion";
 
 const mascotasGlobales = [];
 const mascotaInicial = {
@@ -13,6 +14,22 @@ const mascotaInicial = {
   contacto: "12345678",
   estado: "Disponible"
 };
+
+const aplicacionInicial={
+  IdMascota:"4848",
+  nomMascota:"Pelula",
+  ci:"9412098",
+  nombre:"Andres Zubieta",
+  correo:"andres.zubieta@ucb.edu.bo",
+  numero:"764242387",
+  razon:"Me gustan mucho los gatos amigables y dormilones",
+  estado:"Pendiente"
+
+}
+
+
+
+
 const AplicacionesGlobales=[];
 function esconderBotones(){
     mostrarFormBtn.style.display = "none";
@@ -27,6 +44,7 @@ function mostrarBotones(){
 }
 
 mascotasGlobales.push(mascotaInicial)
+AplicacionesGlobales.push(aplicacionInicial)
 
 const Registrarform = document.querySelector("#mascota-form");
 const IdInput = document.querySelector("#id");
@@ -175,3 +193,30 @@ mostrarAplicacionesBtn.addEventListener("click",()=>{
   registroDiv.style.display="none"
 
 })
+
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-aceptar")) {
+    
+    const idMascota = Number(e.target.dataset.idMascota);
+    const index = Number(e.target.dataset.indexAplicacion);
+
+    aceptarAplicacion(idMascota, index, mascotasGlobales, AplicacionesGlobales);
+
+    divAplicacion.style.display="none";
+    mostrarBotones();
+    busquedaContainer.style.display="none";
+  }
+});
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-negar")) {
+
+    const index = Number(e.target.dataset.indexAplicacion);
+
+    negarAplicacion(index, AplicacionesGlobales);
+
+    divAplicacion.style.display="none";
+    mostrarBotones();
+    busquedaContainer.style.display="none";
+  }
+});

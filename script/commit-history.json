@@ -209,17 +209,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5cc13b630cb025a1c025bbe09873ad26e34c5693",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-11-25T08:32:18.000Z",
       "message": "test: pruebas para la funcion de mostrar aplicaciones",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/5cc13b630cb025a1c025bbe09873ad26e34c5693"
     },
     "stats": {
       "total": 178,
       "additions": 147,
       "deletions": 31,
+      "date": "2025-11-25"
+    },
+    "coverage": 93.62,
+    "test_count": 21,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-11-25T09:51:24.000Z",
+      "message": "feat: Los botones de aceptar y negar aplicaciones funcionan y cambian el estado de las aplicaciones y mascotas",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 77,
+      "additions": 72,
+      "deletions": 5,
       "date": "2025-11-25"
     },
     "coverage": 93.62,

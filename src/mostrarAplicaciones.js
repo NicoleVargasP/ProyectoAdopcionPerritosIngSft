@@ -4,7 +4,7 @@ export default function mostrarAplicaciones(aplicaciones) {
   }
 
   return aplicaciones
-    .map((m) => {
+    .map((m,index) => {
       return `
       <div style="border:1px solid #ccc; padding:10px; border-radius:10px; margin:8px 0;">
         <p><b>Id Mascota:</b> ${m.IdMascota}</p>
@@ -21,15 +21,15 @@ export default function mostrarAplicaciones(aplicaciones) {
             ? `
               <button 
                 class="btn-aceptar" 
-                data-idMascota="${m.id}"
-                data-Aplicacion="${m.id}" 
+                data-id-mascota="${m.IdMascota}"
+                data-index-aplicacion="${index}" 
                 style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
                 Aceptar Peticion
               </button>
 
               <button 
-                class="btn-Negar" 
-                data-Aplicacion="${m.id}"
+                class="btn-negar" 
+                data-aplicacion="${m}"
                 style="background:#D62727; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
                 Negar Peticion
               </button>
