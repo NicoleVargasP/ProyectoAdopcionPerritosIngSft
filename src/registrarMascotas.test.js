@@ -1,5 +1,4 @@
 import registrarMascota from "./registrarMascota.js";
-
 describe("Función registrarMascota", () => {
 
   const camposBase = {
@@ -35,17 +34,17 @@ describe("Función registrarMascota", () => {
 
   test("Error si el ID no es un número", () => {
     const resultado = registrarMascota("abc", "Firulais", 3, "Perro", "Juguetón", "4548784", []);
-    expect(resultado).toBe("El ID debe ser un número.");
+    expect(resultado).toBe("El ID debe ser un número positivo.");
   });
 
   test("Error si la edad no es un número ni 'Sin edad asignada'", () => {
     const resultado = registrarMascota(1, "Firulais", "tres", "Perro", "Juguetón", "44874557", []);
-    expect(resultado).toBe("La edad debe ser un número o 'Sin edad asignada'.");
+    expect(resultado).toBe("La edad debe ser un número entre 0 y 20 o 'Sin edad asignada'.");
   });
 
   test("Error si el ID ya existe", () => {
     const mascotasRegistradas = [{ id: "1", nombre: "Rex" }];
-    const resultado = registrarMascota("1", "Firulais", 2, "Perro", "Lindo", "7845978", mascotasRegistradas);
+    const resultado = registrarMascota("1", "Rex", 2, "Perro", "Lindo", "7845978", mascotasRegistradas);
     expect(resultado).toBe("El ID ya está registrado.");
   });
 

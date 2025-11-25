@@ -1,40 +1,44 @@
-export default function registrarMascota(id, nom, edad, especie, descripcion, contacto, mascotasRegistradas = []) {
-  
-  // Validar campos vacíos
-  if (!id || !nom || !edad || !especie || !descripcion || !contacto) {
-    return {exito: false, mensaje: "Por favor, completa todos los campos."};
+import { validarMascota } from "./validarMascota.js";
+
+export default function registrarMascota(
+  id,
+  nombre,
+  edad,
+  especie,
+  descripcion,
+  contacto,
+  mascotasRegistradas = []
+) {
+  // Usamos la función de validación
+  const error = validarMascota({ id, nombre, edad, especie, descripcion, contacto }, mascotasRegistradas);
+  if (error) {
+    return error; // devuelvo string directamente para mantener compatibilidad
   }
 
-  // Validar que ID sea número
-  if (isNaN(id)) {
-    return { exito: false, mensaje: "El ID debe ser un número." };
-  }
+  // Creamos la mascota con estado "Disponible"
+  const mascota = {
+    id,
+    nombre,
+    edad,
+    especie,
+    descripcion,
+    contacto,
+    estado: "Disponible", // nueva propiedad
+  };
 
-  // Validar que Edad sea número
- if (edad !== "Sin edad asignada" && isNaN(Number(edad))) {
-  return { exito: false, mensaje: "La edad debe ser un número o 'Sin edad asignada'." };
+  // Agregamos a la lista
+  mascotasRegistradas.push(mascota);
+
+  // Construimos el mensaje en HTML
+  return (
+    "Se registró la mascota con éxito" +
+    "<p>Id: " + id + "</p>" +
+    "<p>Nombre: " + nombre + "</p>" +
+    "<p>Edad: " + edad + "</p>" +
+    "<p>Especie: " + especie + "</p>" +
+    "<p>Descripcion: " + descripcion + "</p>" +
+    "<p>Contacto: " + contacto + "</p>"
+  );
 }
-  const telefonoRegex = /^(\+?\d{7,15}|\d{3}-\d{6,10})$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!telefonoRegex.test(contacto) && !emailRegex.test(contacto)) {
-    return { exito: false, mensaje: "El contacto debe ser un número telefónico o un correo electrónico válido."}; 
-  }
-
-  // Validar que ID sea único
-  if (mascotasRegistradas.some(m => m.id === id)) {
-    return { exito: false, mensaje: "El ID ya está registrado."}  ;
-  }
-
-    return "Se registró la mascota con éxito" +
-      "<p>Id: "+id+"</p>"+
-        "<p>Nombre: "+nom+"</p>"+
-        "<p>Edad: " +edad+"</p>"+
-        "<p>Especie: " +especie+"</p>"+
-        "<p>Descripcion: "+descripcion+"</p>"+
-        "<p>Contacto: "+contacto+"</p>";
-} 
-
-
 
 
