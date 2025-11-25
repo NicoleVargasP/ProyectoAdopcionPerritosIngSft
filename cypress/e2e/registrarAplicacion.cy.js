@@ -6,7 +6,7 @@ describe("Registrar Aplicación - Cypress", () => {
 
   it("Debe registrar una aplicación correctamente con todos los campos", () => {
     cy.get("#mostrar-mascotas-btn").click();
-    cy.get("button").contains("Formulario Adopción").first().click();
+    cy.get("button").contains("Formulario Adopcion").first().click();
 
     cy.get("#ciAplicante").type("9412098");
     cy.get("#nombreAplicante").type("Andres Zubieta");
@@ -22,7 +22,7 @@ describe("Registrar Aplicación - Cypress", () => {
 
   it("Debe registrar una aplicación y asignar 'Sin Razon' si no se proporciona razón", () => {
     cy.get("#mostrar-mascotas-btn").click();
-    cy.get("button").contains("Formulario Adopción").first().click();
+    cy.get("button").contains("Formulario Adopcion").first().click();
 
     cy.get("#ciAplicante").type("1234567");
     cy.get("#nombreAplicante").type("Ana Perez");
@@ -38,7 +38,7 @@ describe("Registrar Aplicación - Cypress", () => {
 
   it("Debe mostrar error si falta algún campo obligatorio", () => {
     cy.get("#mostrar-mascotas-btn").click();
-    cy.get("button").contains("Formulario Adopción").first().click();
+    cy.get("button").contains("Formulario Adopcion").first().click();
 
     // Limpiar campos obligatorios
     cy.get("#ciAplicante").clear();
@@ -53,7 +53,7 @@ describe("Registrar Aplicación - Cypress", () => {
 
   it("Debe mostrar error si el CI es inválido", () => {
     cy.get("#mostrar-mascotas-btn").click();
-    cy.get("button").contains("Formulario Adopción").first().click();
+    cy.get("button").contains("Formulario Adopcion").first().click();
 
     cy.get("#ciAplicante").type("-123");
     cy.get("#nombreAplicante").type("Luis Gomez");
@@ -66,7 +66,7 @@ describe("Registrar Aplicación - Cypress", () => {
 
   it("Debe mostrar error si el nombre contiene caracteres inválidos", () => {
     cy.get("#mostrar-mascotas-btn").click();
-    cy.get("button").contains("Formulario Adopción").first().click();
+    cy.get("button").contains("Formulario Adopcion").first().click();
 
     cy.get("#ciAplicante").type("1234567");
     cy.get("#nombreAplicante").type("Luis123"); // nombre inválido
@@ -80,7 +80,7 @@ describe("Registrar Aplicación - Cypress", () => {
 
   it("Debe mostrar error si correo y número son inválidos", () => {
     cy.get("#mostrar-mascotas-btn").click();
-    cy.get("button").contains("Formulario Adopción").first().click();
+    cy.get("button").contains("Formulario Adopcion").first().click();
 
     cy.get("#ciAplicante").type("1234567");
     cy.get("#nombreAplicante").type("Maria Lopez");

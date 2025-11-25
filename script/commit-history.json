@@ -342,12 +342,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a36257b82caaf5d700d091e806a75457bbafd6b8",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-11-25T10:19:47.000Z",
       "message": "fix:error merge",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/a36257b82caaf5d700d091e806a75457bbafd6b8"
     },
     "stats": {
       "total": 3,
@@ -391,6 +391,25 @@
       "total": 79,
       "additions": 39,
       "deletions": 40,
+      "date": "2025-11-25"
+    },
+    "coverage": 97.1,
+    "test_count": 24,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole Vargas",
+    "commit": {
+      "date": "2025-11-25T11:15:09.000Z",
+      "message": "refactor: refactorizacion general de las pruebas de cypress en registrar y mostrar de aplicacion",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 153,
+      "additions": 147,
+      "deletions": 6,
       "date": "2025-11-25"
     },
     "coverage": 97.1,
