@@ -11,11 +11,11 @@ export default function registrarMascota(
 ) {
   // Usamos la función de validación
   const error = validarMascota({ id, nombre, edad, especie, descripcion, contacto }, mascotasRegistradas);
-  if (error) {
+  if (error!=null) {
     return error; // devuelvo string directamente para mantener compatibilidad
   }
-
-  // Creamos la mascota con estado "Disponible"
+  else{
+    // Creamos la mascota con estado "Disponible"
   const mascota = {
     id,
     nombre,
@@ -39,4 +39,6 @@ export default function registrarMascota(
     "<p>Descripcion: " + descripcion + "</p>" +
     "<p>Contacto: " + contacto + "</p>"
   );
+  }
+
 }

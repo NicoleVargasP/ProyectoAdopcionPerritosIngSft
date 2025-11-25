@@ -30,8 +30,8 @@ export function validarMascota(data, mascotasRegistradas = []) {
 
   // Edad: número válido o "Sin edad asignada"
   if (edad !== "Sin edad asignada") {
-    if (isNaN(Number(edad)) || Number(edad) < 0 || Number(edad) > 20) {
-      return "La edad debe ser un número entre 0 y 20 o 'Sin edad asignada'.";
+    if (isNaN(Number(edad)) || Number(edad) < 0 || Number(edad) > 30) {
+      return "La edad debe ser un número entre 0 y 30 o 'Sin edad asignada'.";
     }
   }
 

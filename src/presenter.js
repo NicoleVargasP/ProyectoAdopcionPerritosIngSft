@@ -72,11 +72,11 @@ Registrarform.addEventListener("submit", (event) => {
   registroDiv.innerHTML = `<p>${mensaje}</p>`;
 
   // Si sale error que se mantenta el formulario
-  if (mensaje.exito == false) {
+  if (!mensaje.includes("éxito")) {
     Registrarform.style.display = "block";
     mostrarFormBtn.style.display = "none";
     mostrarMascotasBtn.style.display = "none";
-    registroDiv.innerHTML ="Error: "+mensaje.mensaje+"<p>"
+    registroDiv.innerHTML ="Error: "+mensaje+"<p>"
     return;
   }
   registroDiv.innerHTML = `<p>${mensaje}</p>`;
@@ -87,11 +87,7 @@ Registrarform.addEventListener("submit", (event) => {
   registroDiv.innerHTML = html;
   busquedaContainer.style.display = "block";
 });*/
-
-
-  // Si se registró correctamente, guardar mascota y volver a los botones
-  const mascota = { id, nombre, edad, especie, descripcion, contacto };
-  mascotasGlobales.push(mascota);
+;
 
   Registrarform.reset();
   Registrarform.style.display = "none";
