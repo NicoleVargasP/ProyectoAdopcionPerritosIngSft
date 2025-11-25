@@ -5,6 +5,7 @@ import mostrarAplicaciones from "./mostrarAplicaciones";
 import { aceptarAplicacion, negarAplicacion } from "./respuestaAplicacion";
 
 const mascotasGlobales = [];
+const AplicacionesGlobales=[];
 const mascotaInicial = {
   id: "4848",
   nombre: "Pelula",
@@ -28,9 +29,6 @@ const aplicacionInicial={
 }
 
 
-
-
-const AplicacionesGlobales=[];
 function esconderBotones(){
     mostrarFormBtn.style.display = "none";
   mostrarMascotasBtn.style.display = "none";
@@ -58,7 +56,6 @@ const registroDiv = document.querySelector("#registro-mascotas");
 
 const mostrarFormBtn = document.querySelector("#mostrar-registrar-btn");
 const mostrarMascotasBtn = document.querySelector("#mostrar-mascotas-btn");
-
 const mostrarAplicacionesBtn =document.querySelector("#mostrar-aplicaciones-btn")
 
 const busquedaContainer = document.querySelector("#busqueda-container");
@@ -83,6 +80,7 @@ mostrarFormBtn.addEventListener("click", () => {
   Registrarform.style.display = "block";
   esconderBotones();
   registroDiv.innerHTML=" ";
+  busquedaContainer.style.display="none";
   divAplicacion.style.display="none";
 
 });
@@ -111,15 +109,6 @@ Registrarform.addEventListener("submit", (event) => {
     return;
   }
   registroDiv.innerHTML = `<p>${mensaje}</p>`;
-
-// Mostrar todas las mascotas registradas
-/*mostrarMascotasBtn.addEventListener("click", () => {
-  const html = mostrarMascotas(mascotasGlobales);
-  registroDiv.innerHTML = html;
-  busquedaContainer.style.display = "block";
-});*/
-;
-
   Registrarform.reset();
   Registrarform.style.display = "none";
   mostrarBotones();
@@ -188,6 +177,7 @@ btnRegistroAplicacion.addEventListener("click", () => {
 });
 
 mostrarAplicacionesBtn.addEventListener("click",()=>{
+  busquedaContainer.style.display="none";
   divAplicacion.innerHTML=mostrarAplicaciones(AplicacionesGlobales);
   divAplicacion.style.display="block"
   registroDiv.style.display="none"
