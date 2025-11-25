@@ -361,12 +361,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "29ec3ecf0486e3e3e4f193e97984a23b64c426d3",
     "author": "Andres Zubieta",
     "commit": {
       "date": "2025-11-25T10:23:38.000Z",
       "message": "commit para merge",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/29ec3ecf0486e3e3e4f193e97984a23b64c426d3"
     },
     "stats": {
       "total": 101,
@@ -410,6 +410,25 @@
       "total": 115,
       "additions": 57,
       "deletions": 58,
+      "date": "2025-11-25"
+    },
+    "coverage": 97.1,
+    "test_count": 24,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-11-25T11:08:08.000Z",
+      "message": "refactor: creacion de metodo filtroMascotas",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 14,
+      "deletions": 20,
       "date": "2025-11-25"
     },
     "coverage": 97.1,

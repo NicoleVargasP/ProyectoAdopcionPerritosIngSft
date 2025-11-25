@@ -3,6 +3,7 @@ import mostrarMascotas from "./mostrarMascotas";
 import registrarAplicacion from "./registrarAplicacion";
 import mostrarAplicaciones from "./mostrarAplicaciones";
 import { aceptarAplicacion, negarAplicacion } from "./respuestaAplicacion";
+import filtrarMascotas from "./filtrarMascotas";
 
 const mascotasGlobales = [];
 const AplicacionesGlobales=[];
@@ -119,14 +120,7 @@ btnBuscarMascota.addEventListener("click", () => {
   const terminoBusqueda = inputParametroBusqueda.value.toLowerCase();
 
   // Filtramos la lista de mascotas
-  const mascotasFiltradas = mascotasGlobales.filter(mascota => {
-    const nombre = mascota.nombre.toLowerCase();
-    const especie = mascota.especie.toLowerCase();
-    // Devuelve true si el término de búsqueda está incluido en el nombre O en la especie
-    return nombre.includes(terminoBusqueda) || especie.includes(terminoBusqueda);
-  });
-  
-  // Aqui volvi a usar mostrarMascotas con la lista ya filtrada
+  const mascotasFiltradas = filtrarMascotas(terminoBusqueda,mascotasGlobales);
   const html = mostrarMascotas(mascotasFiltradas);
   divRegistroMascotas.innerHTML = html;
 });
