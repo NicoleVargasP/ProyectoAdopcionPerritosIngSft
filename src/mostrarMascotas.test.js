@@ -29,6 +29,7 @@ describe("Función mostrarMascotas", () => {
 
     expect(resultado).toContain("<p><b>Id:</b> 1</p>");
     expect(resultado).toContain("<p><b>Nombre:</b> Firulais</p>");
+    expect(resultado).toContain("Formulario Adopcion")
   });
 
   test("Debe mostrar múltiples mascotas correctamente", () => {

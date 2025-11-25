@@ -16,7 +16,7 @@ function tarjetaMascota(m) {
            data-id="${id}"
            data-nombre="${nombre}"
            style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
-           Formulario Adopción
+           Formulario Adopcion
          </button>`
       : "";
 
