@@ -13,6 +13,7 @@ export default function mostrarMascotas(mascotas) {
         <p><b>Especie:</b> ${m.especie}</p>
         <p><b>Descripción:</b> ${m.descripcion}</p>
         <p><b>Contacto:</b> ${m.contacto}</p>
+        <p><b>Estado:</b> ${m.estado}</p>
 
 
         <button 

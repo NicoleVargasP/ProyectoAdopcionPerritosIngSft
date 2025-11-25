@@ -1,4 +1,4 @@
-export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, correo, numero, razon) {
+export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, correo, numero, razon,AplicacionesRegistrada=[]) {
   if (!razon) {
     razon = "Sin Razon";
   }
@@ -14,8 +14,11 @@ export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, c
   if (!telefonoRegex.test(numero) && !emailRegex.test(correo)) {
         return {exito: false,mensaje: "Ingrese un número telefónico o correo electrónico válido."};
   }
+  const apli={IdMascota,nomMascota,ci,nombre,correo,numero,razon,estado: "Pendiente"}
 
-  return (
+  AplicacionesRegistrada.push(apli)
+
+  return {exito:true, mensaje:
     "Se registró la aplicacion con éxito" +
     "<p>Id Mascota: " + IdMascota + "</p>" +
     "<p>Nombre Mascota: " + nomMascota + "</p>" +
@@ -23,6 +26,8 @@ export default function registrarAplicacion(IdMascota, nomMascota, ci, nombre, c
     "<p>Nombre: " + nombre + "</p>" +
     "<p>Correo: " + correo + "</p>" +
     "<p>Numero: " + numero + "</p>" +
-    "<p>Razon: " + razon + "</p>"
-  );
+    "<p>Razon: " + razon + "</p>" +
+    "<p>Estado: " + apli.estado + "</p>"
+
+  };
 }

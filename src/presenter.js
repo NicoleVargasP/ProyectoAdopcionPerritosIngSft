@@ -1,6 +1,7 @@
 import registrarMascota from "./registrarMascota";
 import mostrarMascotas from "./mostrarMascotas";
 import registrarAplicacion from "./registrarAplicacion";
+import mostrarAplicaciones from "./mostrarAplicaciones";
 
 const mascotasGlobales = [];
 const mascotaInicial = {
@@ -9,9 +10,21 @@ const mascotaInicial = {
   edad: "8",
   especie: "Gato",
   descripcion: "Muy juguetóna, amigable y dormilona.",
-  contacto: "12345678"
+  contacto: "12345678",
+  estado: "Disponible"
 };
 const AplicacionesGlobales=[];
+function esconderBotones(){
+    mostrarFormBtn.style.display = "none";
+  mostrarMascotasBtn.style.display = "none";
+  mostrarAplicacionesBtn.style.display="none";
+
+}
+function mostrarBotones(){
+  mostrarFormBtn.style.display = "block";
+  mostrarMascotasBtn.style.display = "block";
+  mostrarAplicacionesBtn.style.display="block";
+}
 
 mascotasGlobales.push(mascotaInicial)
 
@@ -27,6 +40,8 @@ const registroDiv = document.querySelector("#registro-mascotas");
 
 const mostrarFormBtn = document.querySelector("#mostrar-registrar-btn");
 const mostrarMascotasBtn = document.querySelector("#mostrar-mascotas-btn");
+
+const mostrarAplicacionesBtn =document.querySelector("#mostrar-aplicaciones-btn")
 
 const busquedaContainer = document.querySelector("#busqueda-container");
 const parametroBusquedaInput = document.querySelector("#parametro-busqueda");
@@ -48,8 +63,7 @@ const ciInput = document.querySelector("#ciAplicante");
 // Mostrar el formulario al presionar el botón
 mostrarFormBtn.addEventListener("click", () => {
   Registrarform.style.display = "block";
-  mostrarFormBtn.style.display = "none";
-  mostrarMascotasBtn.style.display = "none";
+  esconderBotones();
   registroDiv.innerHTML=" ";
   divAplicacion.style.display="none";
 
@@ -74,8 +88,7 @@ Registrarform.addEventListener("submit", (event) => {
   // Si sale error que se mantenta el formulario
   if (!mensaje.includes("éxito")) {
     Registrarform.style.display = "block";
-    mostrarFormBtn.style.display = "none";
-    mostrarMascotasBtn.style.display = "none";
+    esconderBotones();
     registroDiv.innerHTML ="Error: "+mensaje+"<p>"
     return;
   }
@@ -91,8 +104,7 @@ Registrarform.addEventListener("submit", (event) => {
 
   Registrarform.reset();
   Registrarform.style.display = "none";
-  mostrarFormBtn.style.display = "block";
-  mostrarMascotasBtn.style.display = "block";
+  mostrarBotones();
 });
 
 
@@ -118,6 +130,7 @@ buscarBtn.addEventListener("click", () => {
 // Mostrar todas las mascotas registradas
 mostrarMascotasBtn.addEventListener("click", () => {
   const html = mostrarMascotas(mascotasGlobales);
+  registroDiv.style.display="block"
   registroDiv.innerHTML = html;
   busquedaContainer.style.display = "block"
   divAplicacion.style.display="none"
@@ -132,27 +145,33 @@ document.addEventListener("click", (e) => {
     registroDiv.nombreMascota=nombreMascota
     formularioAdopcion.style.display="block";
     infoMascotaAdoptar.innerHTML="Id Mascota: "+registroDiv.idMascota+"<p>                   Nombre Mascota: "+nombreMascota
-    mostrarFormBtn.style.display = "none";
-    mostrarMascotasBtn.style.display = "none";
+    esconderBotones();
     busquedaContainer.style.display="none";
     return;
 
   }
 });
 btnRegistroAplicacion.addEventListener("click", () => {
-  const aplicacion= registrarAplicacion(registroDiv.idMascota,registroDiv.nombreMascota,ciInput.value,nomApInput.value, correoInput.value,numeroApInput.value,razonInput.value)
-  
-  divAplicacion.innerHTML=aplicacion
+  const aplicacion= registrarAplicacion(registroDiv.idMascota,registroDiv.nombreMascota,ciInput.value,nomApInput.value, correoInput.value,numeroApInput.value,razonInput.value,AplicacionesGlobales)
+  console.log("hola")
   divAplicacion.style.display="block"
+  divAplicacion.innerHTML=aplicacion.mensaje
+
   if (aplicacion.exito ==false) {
     mostrarFormBtn.style.display = "none";
     mostrarMascotasBtn.style.display = "none";
     divAplicacion.innerHTML=aplicacion.mensaje;
     return;
   }
-  mostrarFormBtn.style.display = "block";
-    mostrarMascotasBtn.style.display = "block";
+  mostrarBotones();
   formularioAdopcion.style.display ="none"
-  AplicacionesGlobales.push(aplicacion)
   formularioAdopcion.reset();
+  
 });
+
+mostrarAplicacionesBtn.addEventListener("click",()=>{
+  divAplicacion.innerHTML=mostrarAplicaciones(AplicacionesGlobales);
+  divAplicacion.style.display="block"
+  registroDiv.style.display="none"
+
+})

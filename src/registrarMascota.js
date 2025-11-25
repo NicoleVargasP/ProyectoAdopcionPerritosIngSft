@@ -37,7 +37,8 @@ export default function registrarMascota(
     "<p>Edad: " + edad + "</p>" +
     "<p>Especie: " + especie + "</p>" +
     "<p>Descripcion: " + descripcion + "</p>" +
-    "<p>Contacto: " + contacto + "</p>"
+    "<p>Contacto: " + contacto + "</p>"+
+    "<p>Estado: " + mascota.estado + "</p>"
   );
   }
 
