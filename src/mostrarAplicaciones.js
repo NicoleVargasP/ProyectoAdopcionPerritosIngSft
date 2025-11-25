@@ -9,6 +9,7 @@ export default function mostrarAplicaciones(aplicaciones) {
 
     return `
       <button 
+        class="btn-aceptar"
         data-id-mascota="${aplicacion.IdMascota}"
         data-index-aplicacion="${index}" 
         style="background:#3ead76; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">
@@ -16,6 +17,7 @@ export default function mostrarAplicaciones(aplicaciones) {
       </button>
 
       <button 
+        class="btn-negar"
         data-id-mascota="${aplicacion.IdMascota}"
         data-index-aplicacion="${index}"
         style="background:#D62727; color:white; border:none; padding:6px 10px; border-radius:5px; cursor:pointer;">

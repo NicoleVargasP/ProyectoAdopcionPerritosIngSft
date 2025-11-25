@@ -1,16 +1,35 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "a23bef0ef7dd8c27d971ca2dc0bee0e45d47275d",
     "author": "Nicole Vargas",
     "commit": {
       "date": "2025-11-25T11:17:26.000Z",
       "message": "fix: correciion errores en las pruebas",
-      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/a23bef0ef7dd8c27d971ca2dc0bee0e45d47275d"
     },
     "stats": {
       "total": 149,
       "additions": 71,
       "deletions": 78,
+      "date": "2025-11-25"
+    },
+    "coverage": 97.1,
+    "test_count": 24,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Andres Zubieta",
+    "commit": {
+      "date": "2025-11-25T11:43:02.000Z",
+      "message": "refactor: clase de los botones para aceptar o negar peticiones",
+      "url": "https://github.com/NicoleVargasP/ProyectoAdopcionPerritosIngSft/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 3,
+      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 97.1,

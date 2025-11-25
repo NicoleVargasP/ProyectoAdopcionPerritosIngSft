@@ -180,7 +180,7 @@ btnMostrarListaAplicaciones.addEventListener("click",()=>{
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-aceptar")) {
-    
+    console.log("errror?")
     const idMascota = Number(e.target.dataset.idMascota);
     const index = Number(e.target.dataset.indexAplicacion);
 
